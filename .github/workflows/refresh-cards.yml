@@ -1,0 +1,51 @@
+name: Refresh profile stat cards
+
+# Regenerates assets/{hero,stats,languages}.svg from the GitHub API.
+#
+# The default GITHUB_TOKEN can only see this one repo, so the private-repo
+# numbers need a PAT. Create a classic token with the `repo` scope and save it
+# as a repository secret named METRICS_TOKEN:
+#   https://github.com/settings/tokens  →  Generate new token (classic)
+#   Settings → Secrets and variables → Actions → New repository secret
+#
+# Without the secret the job still runs and simply re-commits the last known
+# numbers, so the profile never shows broken or empty cards.
+
+on:
+  schedule:
+    - cron: "0 3 * * 1" # every Monday, 03:00 UTC
+  workflow_dispatch: # lets you refresh on demand from the Actions tab
+  push:
+    paths:
+      - "scripts/build_cards.py"
+      - ".github/workflows/refresh-cards.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: python3 scripts/build_cards.py
+
+      - name: Commit if the numbers moved
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/
+          if git diff --staged --quiet; then
+            echo "No change in stats — nothing to commit."
+          else
+            git commit -m "chore: refresh profile stat cards"
+            git push
+          fi

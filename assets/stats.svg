@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300" role="img" aria-label="GitHub statistics including private repositories">
+
+  <defs>
+    <linearGradient id="gS" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+    <radialGradient id="blobS" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridS" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#FBFAF6" stroke-opacity=".045" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="500" height="300" rx="16" fill="#1B1530"/>
+  <rect width="500" height="300" rx="16" fill="url(#gridS)"/>
+  <circle cx="460" cy="-10" r="150" fill="url(#blobS)"/>
+  <rect x=".5" y=".5" width="499" height="299" rx="15.5" fill="none"
+        stroke="#7C3AED" stroke-opacity=".22"/>
+  <title>GitHub stats (private repos included)</title>
+  <text x="28" y="42" font-family="Georgia,'Times New Roman',serif" font-size="22" fill="#FBFAF6">By the numbers</text>
+  <text x="28" y="63" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="10" letter-spacing="1.2" fill="#7C3AED">INCLUDING 40 PRIVATE REPOSITORIES</text>
+  <line x1="28" y1="78" x2="472" y2="78" stroke="#3E3658"/>
+  <rect x="28" y="84" width="140" height="74" rx="10" fill="#2A2342" fill-opacity=".7" stroke="#7C3AED" stroke-opacity=".28"/>
+  <rect x="28" y="84" width="3.5" height="74" rx="2" fill="#7C3AED"/>
+  <text x="44" y="118" font-family="Georgia,'Times New Roman',serif" font-size="27" fill="#FBFAF6">1,303</text>
+  <text x="44" y="142" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" letter-spacing="1" fill="#A39BB3">CONTRIBUTIONS</text>
+  <rect x="180" y="84" width="140" height="74" rx="10" fill="#2A2342" fill-opacity=".7" stroke="#EC4899" stroke-opacity=".28"/>
+  <rect x="180" y="84" width="3.5" height="74" rx="2" fill="#EC4899"/>
+  <text x="196" y="118" font-family="Georgia,'Times New Roman',serif" font-size="27" fill="#FBFAF6">944</text>
+  <text x="196" y="142" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" letter-spacing="1" fill="#A39BB3">COMMITS</text>
+  <rect x="332" y="84" width="140" height="74" rx="10" fill="#2A2342" fill-opacity=".7" stroke="#F59E0B" stroke-opacity=".28"/>
+  <rect x="332" y="84" width="3.5" height="74" rx="2" fill="#F59E0B"/>
+  <text x="348" y="118" font-family="Georgia,'Times New Roman',serif" font-size="27" fill="#FBFAF6">317</text>
+  <text x="348" y="142" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" letter-spacing="1" fill="#A39BB3">PULL REQUESTS</text>
+  <rect x="28" y="176" width="140" height="74" rx="10" fill="#2A2342" fill-opacity=".7" stroke="#3B82F6" stroke-opacity=".28"/>
+  <rect x="28" y="176" width="3.5" height="74" rx="2" fill="#3B82F6"/>
+  <text x="44" y="210" font-family="Georgia,'Times New Roman',serif" font-size="27" fill="#FBFAF6">40</text>
+  <text x="44" y="234" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" letter-spacing="1" fill="#A39BB3">REPOSITORIES</text>
+  <rect x="180" y="176" width="140" height="74" rx="10" fill="#2A2342" fill-opacity=".7" stroke="#06B6D4" stroke-opacity=".28"/>
+  <rect x="180" y="176" width="3.5" height="74" rx="2" fill="#06B6D4"/>
+  <text x="196" y="210" font-family="Georgia,'Times New Roman',serif" font-size="27" fill="#FBFAF6">231 MB</text>
+  <text x="196" y="234" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" letter-spacing="1" fill="#A39BB3">SOURCE CODE</text>
+  <rect x="332" y="176" width="140" height="74" rx="10" fill="#2A2342" fill-opacity=".7" stroke="#EDE9FE" stroke-opacity=".28"/>
+  <rect x="332" y="176" width="3.5" height="74" rx="2" fill="#EDE9FE"/>
+  <text x="348" y="210" font-family="Georgia,'Times New Roman',serif" font-size="27" fill="#FBFAF6">2023</text>
+  <text x="348" y="234" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" letter-spacing="1" fill="#A39BB3">BUILDING SINCE</text>
+  <text x="472" y="286" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" fill="#3E3658" text-anchor="end">updated 04 Aug 2026</text>
+</svg>
