@@ -1,11 +1,11 @@
 {
   "generated": "05 Aug 2026",
-  "contributions": 1307,
-  "contributions_this_year": 1167,
+  "contributions": 1306,
+  "contributions_this_year": 1166,
   "commits": 946,
   "prs": 317,
   "private_repos": 49,
-  "public_repos": 2,
+  "public_repos": 1,
   "since": 2023,
   "code_bytes": 231429950,
   "languages": [
@@ -94,6 +94,6 @@
     "2023": 4,
     "2024": 107,
     "2025": 29,
-    "2026": 1167
+    "2026": 1166
   }
 }

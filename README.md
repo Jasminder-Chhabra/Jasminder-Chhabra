@@ -162,6 +162,18 @@ From the [Scale Us portfolio](https://scaleus.in/portfolio) — **600+ projects 
 
 ---
 
+## 🧰 Open source
+
+**[Scale Tools](https://github.com/Jasminder-Chhabra/scale-tools)** — free PDF, image and text utilities that run **entirely in your browser**. No sign-up, no watermarks, no upload limits, and your files never leave your device. There's no backend at all; turn off your Wi-Fi and it still works.
+
+<div align="center">
+<a href="https://jasminder-chhabra.github.io/scale-tools/"><img src="https://img.shields.io/badge/Open_Scale_Tools-7C3AED?style=for-the-badge&logoColor=white" alt="Open Scale Tools"></a>
+<a href="https://github.com/Jasminder-Chhabra/scale-tools"><img src="https://img.shields.io/github/stars/Jasminder-Chhabra/scale-tools?style=for-the-badge&color=1B1530&labelColor=1B1530" alt="Stars"></a>
+<a href="https://github.com/Jasminder-Chhabra/scale-tools/blob/main/LICENSE"><img src="https://img.shields.io/badge/MIT-1B1530?style=for-the-badge" alt="MIT"></a>
+</div>
+
+---
+
 ## ⚙️ What makes the work different
 
 - **We own the pipes.** WhatsApp runs on our own Meta Business Manager, not rented through a BSP — so clients get direct pricing and aren't locked into a reseller's margins. Same principle everywhere: if it's core to the product, we own it.
