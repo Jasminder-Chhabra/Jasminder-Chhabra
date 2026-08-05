@@ -80,7 +80,7 @@ def collect(token):
         commits += c["totalCommitContributions"]
         prs += c["totalPullRequestContributions"]
 
-    repos = gh(f"https://api.github.com/user/repos?per_page=100&sort=pushed", token)
+    repos = gh("https://api.github.com/user/repos?per_page=100&sort=pushed", token)
     langs = Counter()
     for r in repos:
         try:
@@ -94,13 +94,43 @@ def collect(token):
         "contributions_this_year": years.get(this_year, 0),
         "commits": commits,
         "prs": prs,
-        "private_repos": user.get("total_private_repos", 0),
-        "public_repos": user.get("public_repos", 0),
+        # Count the listing rather than trusting user.total_private_repos — that
+        # counter reads 0 for fine-grained tokens even when the repos are visible.
+        "private_repos": sum(1 for r in repos if r["private"]),
+        "public_repos": sum(1 for r in repos if not r["private"]),
         "since": created_year,
         "code_bytes": sum(langs.values()),
         "languages": langs.most_common(20),
         "years": years,
     }
+
+
+# Lifetime totals only ever grow. If a refresh reports LESS than what is already
+# committed, the token was degraded (fine-grained PATs silently return public-only
+# figures from contributionsCollection) — not that the work disappeared. Keep the
+# larger value so a weak token can never quietly shrink the card.
+MONOTONIC = ("contributions", "contributions_this_year", "commits", "prs",
+             "private_repos", "public_repos", "code_bytes")
+
+
+def merge(fresh, previous):
+    if not previous:
+        return fresh
+    degraded = []
+    for k in MONOTONIC:
+        old, new = previous.get(k, 0), fresh.get(k, 0)
+        if new < old:
+            degraded.append(f"{k} {new}<{old}")
+            fresh[k] = old
+    if len(fresh.get("languages") or []) < len(previous.get("languages") or []):
+        degraded.append("languages")
+        fresh["languages"] = previous["languages"]
+    if degraded:
+        print("warn: token returned degraded data, kept committed values for: "
+              + ", ".join(degraded), file=sys.stderr)
+        print("      → use a CLASSIC token with the full `repo` scope for METRICS_TOKEN.",
+              file=sys.stderr)
+    return fresh
 
 
 # ------------------------------------------------------------------ svg pieces
@@ -196,7 +226,8 @@ def stats_card(m):
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="GitHub statistics including private repositories">',
         defs(u), shell(w, h, u, "GitHub stats (private repos included)"),
         f'  <text x="28" y="42" font-family="{SERIF}" font-size="22" fill="{PAPER_0}">By the numbers</text>',
-        f'  <text x="28" y="63" font-family="{MONO}" font-size="10" letter-spacing="1.2" fill="{VIOLET}">INCLUDING 40 PRIVATE REPOSITORIES</text>',
+        f'  <text x="28" y="63" font-family="{MONO}" font-size="10" letter-spacing="1.2" fill="{VIOLET}">'
+        f'INCLUDING {m["private_repos"]} PRIVATE REPOSITORIES</text>',
         f'  <line x1="28" y1="78" x2="{w-28}" y2="78" stroke="{INK_700}"/>',
     ]
     for i, (val, lbl, col) in enumerate(tiles):
@@ -258,24 +289,63 @@ def lang_card(m):
     return "\n".join(p)
 
 
+def experience_card(m):
+    """The track record that predates this account. Figures are the ones Scale Us
+    publishes on scaleus.in/about — nothing here is derived from GitHub."""
+    w, h, u = 1000, 190, "X"
+    p = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Track record: 600+ projects delivered, 50,000+ hours of code, teams in 60+ countries, 4.9 star rating">',
+        defs(u),
+        f'  <rect width="{w}" height="{h}" rx="16" fill="{INK_950}"/>',
+        f'  <rect width="{w}" height="{h}" rx="16" fill="url(#grid{u})"/>',
+        f'  <circle cx="60" cy="180" r="170" fill="url(#blob{u})" opacity=".6"/>',
+        f'  <rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="15.5" fill="none" stroke="{VIOLET}" stroke-opacity=".22"/>',
+        f'  <text x="44" y="52" font-family="{SERIF}" font-size="26" fill="{PAPER_0}">Fifteen years before the first commit</text>',
+        f'  <text x="44" y="76" font-family="{SANS}" font-size="13.5" fill="{INK_300}">'
+        f'This account opens in 2023. The work doesn&#8217;t &#8212; most of it shipped long before I moved the whole operation onto Git.</text>',
+        f'  <line x1="44" y1="98" x2="{w-44}" y2="98" stroke="{INK_700}"/>',
+    ]
+    tiles = [("600+", "projects delivered", VIOLET), ("50K+", "hours of code", CORAL),
+             ("60+", "countries served", AMBER), ("20+", "AI products live", SKY),
+             ("4.9/5", "client rating", CYAN)]
+    for i, (val, lbl, col) in enumerate(tiles):
+        cx = 44 + i * 186
+        p += [
+            f'  <rect x="{cx}" y="118" width="4" height="44" rx="2" fill="{col}"/>',
+            f'  <text x="{cx+16}" y="144" font-family="{SERIF}" font-size="30" fill="{PAPER_0}">{val}</text>',
+            f'  <text x="{cx+16}" y="162" font-family="{MONO}" font-size="9.5" letter-spacing=".9" fill="{INK_400}">{lbl.upper()}</text>',
+        ]
+    p.append("</svg>")
+    return "\n".join(p)
+
+
 def main():
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     metrics_path = os.path.join(OUT, "metrics.json")
+
+    previous = None
+    if os.path.exists(metrics_path):
+        with open(metrics_path) as fh:
+            previous = json.load(fh)
+        previous["languages"] = [tuple(x) for x in previous["languages"]]
+
     m = None
     if token:
         try:
-            m = collect(token)
+            m = merge(collect(token), previous)
         except Exception as e:  # noqa: BLE001 - never let a refresh blank the profile
             print(f"warn: live fetch failed ({e}); reusing committed metrics", file=sys.stderr)
     if m is None:
-        with open(metrics_path) as fh:
-            m = json.load(fh)
-        m["languages"] = [tuple(x) for x in m["languages"]]
+        m = previous
+    if m is None:
+        sys.exit("no token and no committed metrics.json — cannot build cards")
 
     os.makedirs(OUT, exist_ok=True)
     with open(metrics_path, "w") as fh:
         json.dump(m, fh, indent=2)
-    for name, svg in (("hero", hero(m)), ("stats", stats_card(m)), ("languages", lang_card(m))):
+    cards = (("hero", hero(m)), ("stats", stats_card(m)),
+             ("languages", lang_card(m)), ("experience", experience_card(m)))
+    for name, svg in cards:
         with open(os.path.join(OUT, f"{name}.svg"), "w") as fh:
             fh.write(svg)
         print(f"wrote assets/{name}.svg")

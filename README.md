@@ -15,12 +15,16 @@
 
 I run **[Scale Us Technologies LLP](https://scaleus.in)** out of India — and I'm the one shipping. Nine products in the suite, every one of them live and paying its own way: AI voice agents that answer phones, a WhatsApp Business platform on our own Meta Business Manager, social publishing across nine networks, restaurant ordering, virtual tours, LMS, analytics, invoicing and email marketing.
 
-Most of what I build is **private and commercial**, so the green squares below are the honest measure of the work, not the repo list.
+Fifteen years in, I still write the code. These days I write it **with AI in the loop** — spec, generate, review, ship — which is how one founder keeps nine products moving at once.
+
+Most of what I build is **private and commercial**, so the numbers below are the honest measure of the work, not the repo list.
 
 ```
 Laravel + Blade monoliths  ·  Node/TypeScript services  ·  Flutter apps
-Self-hosted on our own VPS  ·  GitHub Actions → production on every push
+Design system → nine products  ·  Git → production on every push
 ```
+
+<img src="./assets/experience.svg" alt="600+ projects delivered, 50,000+ hours of code, 60+ countries served, 20+ AI products live, 4.9 out of 5 client rating" width="100%">
 
 ---
 
@@ -119,12 +123,12 @@ From the [Scale Us portfolio](https://scaleus.in/portfolio) — **600+ projects 
 
 The part that isn't visible from a repo list:
 
-- **Every site auto-deploys.** Push to `main` → GitHub Actions SSHes into the VPS, resets to the commit, rebuilds caches, restarts the process manager. Thirteen production sites, no manual FTP, no drift. Git is the single source of truth.
-- **Self-hosted, not serverless.** Everything runs on our own CloudPanel VPS — each site its own Linux user, its own PHP-FPM pool, reverse-proxied Node apps under pm2. Cheaper and faster than PaaS at this scale, and I own the whole box.
-- **PageSpeed 99+ on mobile *and* desktop, CLS ≈ 0.** Compiled Tailwind inlined into `<head>`, self-hosted woff2 with metrics-matched fallback faces so the webfont swap can't reflow the page, LCP element never starting at `opacity: 0`, third-party embeds deferred to first real scroll.
-- **WhatsApp Business Cloud API on our own Meta Business Manager** — WABAs owned outright rather than rented through a BSP, so clients aren't locked to a reseller's margins.
+- **Everything ships from Git.** Push to `main` and it's in production a minute later — build, cache warm, process restart, all automated. Thirteen production sites, no manual uploads, no drift. That discipline replaced fifteen years of edit-and-upload, and it's the single biggest reason one person can hold nine products.
+- **PageSpeed 99+ on mobile *and* desktop, CLS ≈ 0.** Compiled CSS inlined into `<head>`, self-hosted woff2 with metrics-matched fallback faces so the webfont swap can't reflow the page, the LCP element never starting at `opacity: 0`, third-party embeds deferred to first real scroll.
+- **WhatsApp Business Cloud API on our own Meta Business Manager** — WABAs owned outright rather than rented through a BSP, so clients aren't locked into a reseller's margins.
 - **AI voice agents** wired to real telephony, with tool-calling into the CRM for qualification and booking.
-- **A design system, not a theme.** One violet "atlas" token set — `tokens.json` → Tailwind config → each product as it's rebranded, so the suite converges on looking like one company instead of nine acquisitions.
+- **A design system, not a theme.** One violet "atlas" token set — design tokens → Tailwind config → each product as it's rebranded, so the suite converges on looking like one company instead of nine acquisitions.
+- **AI-assisted, not AI-generated.** I spec it, the model drafts it, I review and own every line that ships. Fifteen years of judgement is what makes that safe.
 
 ---
 
