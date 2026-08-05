@@ -201,7 +201,8 @@ def hero(m):
     # Right-hand stat rail. Laid out as rows (not a horizontal ticker) so it can
     # never collide with the tagline, whatever font the renderer substitutes.
     parts.append(f'  <line x1="672" y1="52" x2="672" y2="208" stroke="{VIOLET}" stroke-opacity=".3"/>')
-    stats = [("9", "products in the suite"), ("13", "live production sites"), ("5", "app-store listings")]
+    # Verified by hand: every URL returns 200 and every store listing resolves.
+    stats = [("9", "products in the suite"), ("20", "live production sites"), ("15", "apps on the stores")]
     for i, (n, lbl) in enumerate(stats):
         cy = 96 + i * 46
         parts += [

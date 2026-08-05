@@ -78,17 +78,60 @@ Nine products, all live in production right now.
 
 ## 📱 Shipped to the stores
 
-Native apps I've taken through review and out to real users.
+Nine apps through review and out to real users — [all under **Scale Us** on Google Play](https://play.google.com/store/apps/developer?id=Scale+Us).
+
+**On-demand mobility** — the Uber/Ola pattern, both sides of the marketplace
+
+| App | | |
+|---|---|---|
+| **Quick Driver** — customer app, live tracking & trip management | iOS · Android | [App Store](https://apps.apple.com/in/app/quick-driver-in/id6758759788) · [Google Play](https://play.google.com/store/apps/details?id=com.quickdriver.scaleuscustomer) |
+| **Quick Rider** — the driver-side app | Android | [Google Play](https://play.google.com/store/apps/details?id=com.quickdriver.scaleusdriver) |
+
+**Multi-vendor commerce** — a full three-sided marketplace
+
+| App | | |
+|---|---|---|
+| **Scale Local** — customer storefront | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal) |
+| **Scale Local Rider** — delivery app | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal.rider) |
+| **Scale Local Seller** — vendor/merchant app | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal.seller) |
+
+**Games & rewards**
+
+| App | | |
+|---|---|---|
+| **GameBox** — 50+ games, play-and-earn rewards | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.gamevault) |
+| **Zabla Super Deluxe** | Android | [Google Play](https://play.google.com/store/apps/details?id=com.zablasuperdelux.game) |
+| **Word Puzzle** | Android | [Google Play](https://play.google.com/store/apps/details?id=scaleus.wordsearch) |
+| **Neon Maze** | Android | [Google Play](https://play.google.com/store/apps/details?id=com.neonmaze.game) |
+| **Stacks** | Android | [Google Play](https://play.google.com/store/apps/details?id=com.stacks.game) |
+
+**Kids, learning & fitness**
+
+| App | | |
+|---|---|---|
+| **Scale Little Learners** — early-years learning | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.littlelearners) |
+| **Preschool Fun Learn** | Android | [Google Play](https://play.google.com/store/apps/details?id=com.kidslearning.kidsplay.scaleus.preschool.funlearn) |
+| **Rainbow Rush** — drawing & colour play | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.kidsdrawing1) |
+| **Actyv** — personal trainer & fitness | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.actyv) |
 
 <div align="center">
-
-| App | Platform | |
-|---|---|---|
-| **Quick Driver** — driver-hailing & fleet, live tracking | iOS · Android | [App Store](https://apps.apple.com/in/app/quick-driver-in/id6758759788) · [Google Play](https://play.google.com/store/apps/details?id=com.quickdriver.scaleuscustomer) |
-| **Quick Driver Partner** — the driver-side app | Android | [Google Play](https://play.google.com/store/apps/details?id=com.quickdriver.scaleusdriver) |
-| **TableTrack Rider** — delivery rider app for Scale Dining | iOS · Android | [App Store](https://apps.apple.com/in/app/tabletrack-rider/id6759326050) · [Google Play](https://play.google.com/store/apps/details?id=com.delivery.tabletrack) |
-
+<a href="https://play.google.com/store/apps/developer?id=Scale+Us"><img src="https://img.shields.io/badge/Google_Play_—_Scale_Us-7C3AED?style=for-the-badge&logo=googleplay&logoColor=white" alt="Scale Us on Google Play"></a>
+<a href="https://play.google.com/store/apps/developer?id=Jasminder+Singh+Chhabra"><img src="https://img.shields.io/badge/Google_Play_—_Jasminder_Singh_Chhabra-1B1530?style=for-the-badge&logo=googleplay&logoColor=7C3AED" alt="Jasminder Singh Chhabra on Google Play"></a>
 </div>
+
+---
+
+## 🌐 Client work on the web
+
+Twenty live sites and counting — commerce, custom platforms and creative builds.
+
+| | |
+|---|---|
+| **[texmopipe.com](https://texmopipe.com)** — industrial e-commerce, plus a full [**bidding portal**](https://bidding.texmopipe.com) | E-commerce · Custom |
+| **[satnaamherbals.co.in](https://satnaamherbals.co.in)** — custom-built commerce platform | Custom e-commerce |
+| **[sahejfashion.com](https://sahejfashion.com)** · **[anphar.com](https://anphar.com)** · **[vyasayurved.com](https://vyasayurved.com)** | E-commerce |
+| **[khalsawale.com](https://khalsawale.com)** · **[thekitchenfoods.com](https://thekitchenfoods.com)** | E-commerce |
+| **[portfolio1.scaleus.in](https://portfolio1.scaleus.in)** — ten creative site builds in one showcase | Creative · WordPress |
 
 ---
 
@@ -119,16 +162,13 @@ From the [Scale Us portfolio](https://scaleus.in/portfolio) — **600+ projects 
 
 ---
 
-## ⚙️ How I actually run this
+## ⚙️ What makes the work different
 
-The part that isn't visible from a repo list:
-
-- **Everything ships from Git.** Push to `main` and it's in production a minute later — build, cache warm, process restart, all automated. Thirteen production sites, no manual uploads, no drift. That discipline replaced fifteen years of edit-and-upload, and it's the single biggest reason one person can hold nine products.
-- **PageSpeed 99+ on mobile *and* desktop, CLS ≈ 0.** Compiled CSS inlined into `<head>`, self-hosted woff2 with metrics-matched fallback faces so the webfont swap can't reflow the page, the LCP element never starting at `opacity: 0`, third-party embeds deferred to first real scroll.
-- **WhatsApp Business Cloud API on our own Meta Business Manager** — WABAs owned outright rather than rented through a BSP, so clients aren't locked into a reseller's margins.
-- **AI voice agents** wired to real telephony, with tool-calling into the CRM for qualification and booking.
-- **A design system, not a theme.** One violet "atlas" token set — design tokens → Tailwind config → each product as it's rebranded, so the suite converges on looking like one company instead of nine acquisitions.
-- **AI-assisted, not AI-generated.** I spec it, the model drafts it, I review and own every line that ships. Fifteen years of judgement is what makes that safe.
+- **We own the pipes.** WhatsApp runs on our own Meta Business Manager, not rented through a BSP — so clients get direct pricing and aren't locked into a reseller's margins. Same principle everywhere: if it's core to the product, we own it.
+- **Performance is a feature, not a phase.** PageSpeed 99+ on mobile *and* desktop, layout shift near zero. Fast sites convert; that's the whole argument.
+- **One design system across nine products.** A single token set means the suite looks like one company instead of nine acquisitions — and a new product ships branded on day one.
+- **AI-assisted, not AI-generated.** I spec it, the model drafts it, I review and own every line that ships. Fifteen years of judgement is what makes moving that fast safe.
+- **Everything ships from Git.** Push and it's live in a minute. That discipline replaced fifteen years of edit-and-upload, and it's the single biggest reason one founder can hold twenty sites and fifteen apps at once.
 
 ---
 

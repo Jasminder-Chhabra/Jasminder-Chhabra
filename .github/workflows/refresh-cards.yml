@@ -45,7 +45,18 @@ jobs:
           git add assets/
           if git diff --staged --quiet; then
             echo "No change in stats — nothing to commit."
-          else
-            git commit -m "chore: refresh profile stat cards"
-            git push
+            exit 0
           fi
+          git commit -m "chore: refresh profile stat cards"
+          # A hand-authored push can land between checkout and here, which makes
+          # this a non-fast-forward. Rebase and retry rather than failing the run.
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected — rebasing onto origin/main and retrying"
+            git pull --rebase --autostash origin main || git rebase --abort || true
+          done
+          echo "::error::could not push refreshed cards after 3 attempts"
+          exit 1
