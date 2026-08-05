@@ -25,10 +25,10 @@
   <g clip-path="url(#bcL)">
     <rect x="28.0" y="98" width="178.4" height="16" fill="#7C3AED"/>
     <rect x="206.4" y="98" width="94.1" height="16" fill="#EC4899"/>
-    <rect x="300.5" y="98" width="91.5" height="16" fill="#F59E0B"/>
+    <rect x="300.4" y="98" width="91.5" height="16" fill="#F59E0B"/>
     <rect x="391.9" y="98" width="26.1" height="16" fill="#3B82F6"/>
     <rect x="418.0" y="98" width="15.4" height="16" fill="#06B6D4"/>
-    <rect x="433.5" y="98" width="38.5" height="16" fill="#A39BB3"/>
+    <rect x="433.4" y="98" width="38.6" height="16" fill="#A39BB3"/>
   </g>
   <circle cx="36" cy="148" r="5.5" fill="#7C3AED"/>
   <text x="52" y="152" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#FBFAF6">PHP</text>
