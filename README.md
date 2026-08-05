@@ -162,14 +162,22 @@ From the [Scale Us portfolio](https://scaleus.in/portfolio) — **600+ projects 
 
 ---
 
-## 🧰 Open source
+## 🧰 Open source — the Scale Tools suite
 
-**[Scale Tools](https://github.com/Jasminder-Chhabra/scale-tools)** — free PDF, image and text utilities that run **entirely in your browser**. No sign-up, no watermarks, no upload limits, and your files never leave your device. There's no backend at all; turn off your Wi-Fi and it still works.
+Four toolkits of free utilities that run **entirely in your browser**. No sign-up, no watermarks, no upload limits, no credit caps — and your files never leave your device. There is no backend at all: turn off your Wi-Fi and they still work. One shared design system across all four, MIT-licensed, dependencies vendored so nothing phones home.
+
+| Toolkit | What's inside | |
+|---|---|---|
+| **[Scale Tools](https://github.com/Jasminder-Chhabra/scale-tools)** | Merge & split PDFs, compress and convert images, JSON, word count, Base64, passwords, contrast | [Open](https://jasminder-chhabra.github.io/scale-tools/) |
+| **[Scale Dev Tools](https://github.com/Jasminder-Chhabra/scale-dev-tools)** | JSON ⇄ YAML ⇄ CSV ⇄ XML, JWT decoder, SHA hashes, UUID, regex, diff, cron, colour, case | [Open](https://jasminder-chhabra.github.io/scale-dev-tools/) |
+| **[Scale Image Tools](https://github.com/Jasminder-Chhabra/scale-image-tools)** | Resize with social presets, crop, rotate, watermark, favicon packs, palettes, images→PDF, EXIF stripping | [Open](https://jasminder-chhabra.github.io/scale-image-tools/) |
+| **[Scale SEO Tools](https://github.com/Jasminder-Chhabra/scale-seo-tools)** | SERP preview by pixel width, Open Graph, Schema JSON-LD, QR codes, UTM builder, robots.txt, sitemap check, GST | [Open](https://jasminder-chhabra.github.io/scale-seo-tools/) |
 
 <div align="center">
-<a href="https://jasminder-chhabra.github.io/scale-tools/"><img src="https://img.shields.io/badge/Open_Scale_Tools-7C3AED?style=for-the-badge&logoColor=white" alt="Open Scale Tools"></a>
-<a href="https://github.com/Jasminder-Chhabra/scale-tools"><img src="https://img.shields.io/github/stars/Jasminder-Chhabra/scale-tools?style=for-the-badge&color=1B1530&labelColor=1B1530" alt="Stars"></a>
-<a href="https://github.com/Jasminder-Chhabra/scale-tools/blob/main/LICENSE"><img src="https://img.shields.io/badge/MIT-1B1530?style=for-the-badge" alt="MIT"></a>
+<a href="https://github.com/Jasminder-Chhabra/scale-tools"><img src="https://img.shields.io/github/stars/Jasminder-Chhabra/scale-tools?style=for-the-badge&color=7C3AED&labelColor=1B1530&label=scale-tools" alt="scale-tools stars"></a>
+<a href="https://github.com/Jasminder-Chhabra/scale-dev-tools"><img src="https://img.shields.io/github/stars/Jasminder-Chhabra/scale-dev-tools?style=for-the-badge&color=EC4899&labelColor=1B1530&label=dev-tools" alt="dev-tools stars"></a>
+<a href="https://github.com/Jasminder-Chhabra/scale-image-tools"><img src="https://img.shields.io/github/stars/Jasminder-Chhabra/scale-image-tools?style=for-the-badge&color=F59E0B&labelColor=1B1530&label=image-tools" alt="image-tools stars"></a>
+<a href="https://github.com/Jasminder-Chhabra/scale-seo-tools"><img src="https://img.shields.io/github/stars/Jasminder-Chhabra/scale-seo-tools?style=for-the-badge&color=3B82F6&labelColor=1B1530&label=seo-tools" alt="seo-tools stars"></a>
 </div>
 
 ---
