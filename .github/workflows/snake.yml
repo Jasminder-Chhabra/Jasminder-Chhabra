@@ -8,14 +8,20 @@ name: Generate contribution snake
 # and the snake will have nothing to eat.
 
 on:
+  # Twice a day — the contribution graph only changes granularity by the day,
+  # so more often than this would just burn Actions minutes.
   schedule:
-    - cron: "0 4 * * *" # daily, 04:00 UTC
+    - cron: "37 5,17 * * *"
   workflow_dispatch:
   push:
     branches: [main]
 
 permissions:
   contents: write
+
+concurrency:
+  group: snake
+  cancel-in-progress: true
 
 jobs:
   snake:

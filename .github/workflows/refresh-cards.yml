@@ -12,9 +12,13 @@ name: Refresh profile stat cards
 # numbers, so the profile never shows broken or empty cards.
 
 on:
+  # Every 4 hours. GitHub can't notify this repo when you commit to a *different*
+  # private repo (that would need a dispatch step added to all 50 of them), so a
+  # frequent schedule is the hands-off equivalent — the card is never more than a
+  # few hours behind, with no manual step.
   schedule:
-    - cron: "0 3 * * 1" # every Monday, 03:00 UTC
-  workflow_dispatch: # lets you refresh on demand from the Actions tab
+    - cron: "17 */4 * * *"
+  workflow_dispatch: # refresh on demand from the Actions tab
   push:
     paths:
       - "scripts/build_cards.py"
@@ -22,6 +26,11 @@ on:
 
 permissions:
   contents: write
+
+# Never let two refreshes race each other into the same branch.
+concurrency:
+  group: refresh-cards
+  cancel-in-progress: false
 
 jobs:
   refresh:
