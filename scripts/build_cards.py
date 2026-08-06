@@ -219,9 +219,9 @@ def stats_card(m):
         (fmt(m["contributions"]), "CONTRIBUTIONS", VIOLET),
         (fmt(m["commits"]), "COMMITS", CORAL),
         (fmt(m["prs"]), "PULL REQUESTS", AMBER),
+        (fmt(m["contributions_this_year"]), "THIS YEAR", MINT),
         (fmt(m["private_repos"] + m["public_repos"]), "REPOSITORIES", SKY),
         (f'{m["code_bytes"]/1e6:.0f} MB', "SOURCE CODE", CYAN),
-        (str(m["since"]), "BUILDING SINCE", MINT),
     ]
     p = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="GitHub statistics including private repositories">',
