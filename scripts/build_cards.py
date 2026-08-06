@@ -365,9 +365,9 @@ def experience_card(m):
         f'  <rect width="{w}" height="{h}" rx="16" fill="url(#grid{u})"/>',
         f'  <circle cx="60" cy="180" r="170" fill="url(#blob{u})" opacity=".6"/>',
         f'  <rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="15.5" fill="none" stroke="{VIOLET}" stroke-opacity=".22"/>',
-        f'  <text x="44" y="52" font-family="{SERIF}" font-size="26" fill="{PAPER_0}">Fifteen years before the first commit</text>',
+        f'  <text x="44" y="52" font-family="{SERIF}" font-size="26" fill="{PAPER_0}">Fifteen years in commerce. Ten writing the code.</text>',
         f'  <text x="44" y="76" font-family="{SANS}" font-size="13.5" fill="{INK_300}">'
-        f'This account opens in 2023. The work doesn&#8217;t &#8212; most of it shipped long before I moved the whole operation onto Git.</text>',
+        f'Shipping commercially since 2016. This account opens in 2023 &#8212; most of the work predates it.</text>',
         f'  <line x1="44" y1="98" x2="{w-44}" y2="98" stroke="{INK_700}"/>',
     ]
     tiles = [("600+", "projects delivered", VIOLET), ("50K+", "hours of code", CORAL),
@@ -379,6 +379,80 @@ def experience_card(m):
             f'  <rect x="{cx}" y="118" width="4" height="44" rx="2" fill="{col}"/>',
             f'  <text x="{cx+16}" y="144" font-family="{SERIF}" font-size="30" fill="{PAPER_0}">{val}</text>',
             f'  <text x="{cx+16}" y="162" font-family="{MONO}" font-size="9.5" letter-spacing=".9" fill="{INK_400}">{lbl.upper()}</text>',
+        ]
+    p.append("</svg>")
+    return "\n".join(p)
+
+
+def timeline_card(m):
+    """Two tracks, because the career has two: ~15 years in e-commerce and senior
+    management, and 10 years writing production code since 2016. The GitHub graph
+    can only ever show the slice after 2023, so this states the rest plainly."""
+    w, h, u = 1000, 250, "T"
+    Y0, Y1 = 2011, datetime.now(timezone.utc).year
+    x0, x1 = 66, 934
+    BAND_Y, BAND_H = 138, 18
+    AXIS = BAND_Y + BAND_H / 2
+
+    def X(year):
+        t = (year - Y0) / (Y1 - Y0)
+        return x0 + max(0.0, min(1.0, t)) * (x1 - x0)
+
+    p = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Career timeline: e-commerce and senior management from 2011, first production code in 2016, Scale Us Technologies founded 2020, moved onto Git in 2023, nine products and fifteen apps by {Y1}">',
+        defs(u),
+        f'  <rect width="{w}" height="{h}" rx="16" fill="{INK_950}"/>',
+        f'  <rect width="{w}" height="{h}" rx="16" fill="url(#grid{u})"/>',
+        f'  <circle cx="{w-70}" cy="6" r="175" fill="url(#blob{u})" opacity=".55"/>',
+        f'  <rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="15.5" fill="none" stroke="{VIOLET}" stroke-opacity=".22"/>',
+        f'  <text x="34" y="42" font-family="{SERIF}" font-size="24" fill="{PAPER_0}">The road here</text>',
+        f'  <text x="34" y="62" font-family="{MONO}" font-size="10" letter-spacing="1.2" fill="{VIOLET}">'
+        f'15 YEARS IN COMMERCE &#183; 10 YEARS WRITING THE CODE</text>',
+    ]
+
+    # Era bands. Solid fills — a gradient reference silently failed to paint in one
+    # renderer, and a bar that vanishes is worse than a flat one.
+    eras = [
+        (Y0, 2016, INK_700, INK_300, "E-COMMERCE &#183; SENIOR MANAGEMENT"),
+        (2016, Y1, VIOLET, PAPER_0, "BUILDING &#183; SHIPPING PRODUCTION SOFTWARE"),
+    ]
+    for a, b, fill, ink, label in eras:
+        p.append(f'  <rect x="{X(a):.0f}" y="{BAND_Y}" width="{X(b)-X(a):.0f}" height="{BAND_H}" rx="{BAND_H//2}" fill="{fill}"/>')
+        # Label sits ABOVE the band, left-aligned to the era start, so the
+        # milestone dots on the band can never overprint it.
+        p.append(f'  <text x="{X(a)+3:.0f}" y="{BAND_Y-8}" font-family="{MONO}" font-size="8.5" letter-spacing=".7" fill="{ink}">{label}</text>')
+
+    # Year ticks below the band
+    for y in range(Y0, Y1 + 1, 2):
+        gx = X(y)
+        p += [
+            f'  <line x1="{gx:.0f}" y1="{BAND_Y+BAND_H+4}" x2="{gx:.0f}" y2="{BAND_Y+BAND_H+10}" stroke="{INK_700}"/>',
+            f'  <text x="{gx:.0f}" y="{BAND_Y+BAND_H+24}" font-family="{MONO}" font-size="9" fill="{INK_400}" text-anchor="middle">{y}</text>',
+        ]
+
+    marks = [
+        (2016, "First production code", "freelance &amp; agency delivery", MINT, "up"),
+        (2020, "Scale Us Technologies LLP", "founded", AMBER, "down"),
+        (2023, "Everything moves onto Git", "this account opens", CORAL, "up"),
+        (Y1, "9 products &#183; 20 sites &#183; 15 apps", "live in production", CYAN, "down"),
+    ]
+    for year, title, sub, col, side in marks:
+        gx = X(year)
+        anchor, tx = "middle", gx
+        if gx > x1 - 120:
+            anchor, tx = "end", x1
+        elif gx < x0 + 100:
+            anchor, tx = "start", x0
+        if side == "up":
+            ty, sy, leg = 96, 111, BAND_Y - 24
+            p.append(f'  <line x1="{gx:.0f}" y1="{BAND_Y}" x2="{gx:.0f}" y2="{leg}" stroke="{col}" stroke-opacity=".5"/>')
+        else:
+            ty, sy, leg = 214, 229, BAND_Y + BAND_H + 34
+            p.append(f'  <line x1="{gx:.0f}" y1="{BAND_Y+BAND_H}" x2="{gx:.0f}" y2="{leg}" stroke="{col}" stroke-opacity=".5"/>')
+        p += [
+            f'  <circle cx="{gx:.0f}" cy="{AXIS:.0f}" r="5.5" fill="{col}" stroke="{INK_950}" stroke-width="2"/>',
+            f'  <text x="{tx:.0f}" y="{ty}" font-family="{SANS}" font-size="12.5" font-weight="600" fill="{PAPER_0}" text-anchor="{anchor}">{title}</text>',
+            f'  <text x="{tx:.0f}" y="{sy}" font-family="{SANS}" font-size="10.5" fill="{INK_400}" text-anchor="{anchor}">{sub}</text>',
         ]
     p.append("</svg>")
     return "\n".join(p)
@@ -454,7 +528,7 @@ def main():
         json.dump(m, fh, indent=2)
     cards = (("hero", hero(m)), ("stats", stats_card(m)),
              ("languages", lang_card(m)), ("experience", experience_card(m)),
-             ("streak", streak_card(m)))
+             ("streak", streak_card(m)), ("timeline", timeline_card(m)))
     for name, svg in cards:
         with open(os.path.join(OUT, f"{name}.svg"), "w") as fh:
             fh.write(svg)

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="250" viewBox="0 0 1000 250" role="img" aria-label="Career timeline: e-commerce and senior management from 2011, first production code in 2016, Scale Us Technologies founded 2020, moved onto Git in 2023, nine products and fifteen apps by 2026">
+
+  <defs>
+    <linearGradient id="gT" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+    <radialGradient id="blobT" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridT" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#FBFAF6" stroke-opacity=".045" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="250" rx="16" fill="#0A0A12"/>
+  <rect width="1000" height="250" rx="16" fill="url(#gridT)"/>
+  <circle cx="930" cy="6" r="175" fill="url(#blobT)" opacity=".55"/>
+  <rect x=".5" y=".5" width="999" height="249" rx="15.5" fill="none" stroke="#7C3AED" stroke-opacity=".22"/>
+  <text x="34" y="42" font-family="Georgia,'Times New Roman',serif" font-size="24" fill="#FBFAF6">The road here</text>
+  <text x="34" y="62" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="10" letter-spacing="1.2" fill="#7C3AED">15 YEARS IN COMMERCE &#183; 10 YEARS WRITING THE CODE</text>
+  <rect x="66" y="138" width="289" height="18" rx="9" fill="#3E3658"/>
+  <text x="69" y="130" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="8.5" letter-spacing=".7" fill="#CBC5D6">E-COMMERCE &#183; SENIOR MANAGEMENT</text>
+  <rect x="355" y="138" width="579" height="18" rx="9" fill="#7C3AED"/>
+  <text x="358" y="130" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="8.5" letter-spacing=".7" fill="#FBFAF6">BUILDING &#183; SHIPPING PRODUCTION SOFTWARE</text>
+  <line x1="66" y1="160" x2="66" y2="166" stroke="#3E3658"/>
+  <text x="66" y="180" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" fill="#A39BB3" text-anchor="middle">2011</text>
+  <line x1="182" y1="160" x2="182" y2="166" stroke="#3E3658"/>
+  <text x="182" y="180" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" fill="#A39BB3" text-anchor="middle">2013</text>
+  <line x1="297" y1="160" x2="297" y2="166" stroke="#3E3658"/>
+  <text x="297" y="180" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" fill="#A39BB3" text-anchor="middle">2015</text>
+  <line x1="413" y1="160" x2="413" y2="166" stroke="#3E3658"/>
+  <text x="413" y="180" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" fill="#A39BB3" text-anchor="middle">2017</text>
+  <line x1="529" y1="160" x2="529" y2="166" stroke="#3E3658"/>
+  <text x="529" y="180" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" fill="#A39BB3" text-anchor="middle">2019</text>
+  <line x1="645" y1="160" x2="645" y2="166" stroke="#3E3658"/>
+  <text x="645" y="180" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" fill="#A39BB3" text-anchor="middle">2021</text>
+  <line x1="760" y1="160" x2="760" y2="166" stroke="#3E3658"/>
+  <text x="760" y="180" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" fill="#A39BB3" text-anchor="middle">2023</text>
+  <line x1="876" y1="160" x2="876" y2="166" stroke="#3E3658"/>
+  <text x="876" y="180" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" fill="#A39BB3" text-anchor="middle">2025</text>
+  <line x1="355" y1="138" x2="355" y2="114" stroke="#EDE9FE" stroke-opacity=".5"/>
+  <circle cx="355" cy="147" r="5.5" fill="#EDE9FE" stroke="#0A0A12" stroke-width="2"/>
+  <text x="355" y="96" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#FBFAF6" text-anchor="middle">First production code</text>
+  <text x="355" y="111" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="10.5" fill="#A39BB3" text-anchor="middle">freelance &amp; agency delivery</text>
+  <line x1="587" y1="156" x2="587" y2="190" stroke="#F59E0B" stroke-opacity=".5"/>
+  <circle cx="587" cy="147" r="5.5" fill="#F59E0B" stroke="#0A0A12" stroke-width="2"/>
+  <text x="587" y="214" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#FBFAF6" text-anchor="middle">Scale Us Technologies LLP</text>
+  <text x="587" y="229" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="10.5" fill="#A39BB3" text-anchor="middle">founded</text>
+  <line x1="760" y1="138" x2="760" y2="114" stroke="#EC4899" stroke-opacity=".5"/>
+  <circle cx="760" cy="147" r="5.5" fill="#EC4899" stroke="#0A0A12" stroke-width="2"/>
+  <text x="760" y="96" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#FBFAF6" text-anchor="middle">Everything moves onto Git</text>
+  <text x="760" y="111" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="10.5" fill="#A39BB3" text-anchor="middle">this account opens</text>
+  <line x1="934" y1="156" x2="934" y2="190" stroke="#06B6D4" stroke-opacity=".5"/>
+  <circle cx="934" cy="147" r="5.5" fill="#06B6D4" stroke="#0A0A12" stroke-width="2"/>
+  <text x="934" y="214" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#FBFAF6" text-anchor="end">9 products &#183; 20 sites &#183; 15 apps</text>
+  <text x="934" y="229" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="10.5" fill="#A39BB3" text-anchor="end">live in production</text>
+</svg>

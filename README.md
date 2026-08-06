@@ -15,7 +15,9 @@
 
 I run **[Scale Us Technologies LLP](https://scaleus.in)** out of India — and I'm the one shipping. Nine products in the suite, every one of them live and paying its own way: AI voice agents that answer phones, a WhatsApp Business platform on our own Meta Business Manager, social publishing across nine networks, restaurant ordering, virtual tours, LMS, analytics, invoicing and email marketing.
 
-Fifteen years in, I still write the code. These days I write it **with AI in the loop** — spec, generate, review, ship — which is how one founder keeps nine products moving at once.
+Fifteen years in e-commerce and senior management taught me what a business actually needs; I've spent the last ten building it myself, since 2016. These days I write code **with AI in the loop** — spec, generate, review, ship — which is how one founder keeps nine products moving at once.
+
+The graph below starts in 2023, because that's when I moved the operation onto Git. The work started well before it.
 
 Most of what I build is **private and commercial**, so the numbers below are the honest measure of the work, not the repo list.
 
@@ -24,15 +26,17 @@ Laravel + Blade monoliths  ·  Node/TypeScript services  ·  Flutter apps
 Design system → nine products  ·  Git → production on every push
 ```
 
-<img src="./assets/experience.svg" alt="600+ projects delivered, 50,000+ hours of code, 60+ countries served, 20+ AI products live, 4.9 out of 5 client rating" width="100%">
+<img src="./assets/timeline.svg" alt="Career timeline: e-commerce and senior management from 2011, first production code 2016, Scale Us Technologies founded 2020, moved onto Git 2023, nine products and fifteen apps live by 2026" width="100%">
+
+<img src="./assets/experience.svg" alt="Fifteen years in commerce, ten writing the code: 600+ projects delivered, 50,000+ hours of code, 60+ countries served, 20+ AI products live, 4.9 out of 5 client rating" width="100%">
 
 ---
 
 ## 📊 The numbers
 
 <div align="center">
-<img src="./assets/stats.svg" alt="1,303 contributions, 944 commits, 317 pull requests, 40 repositories, 231 MB of source, building since 2023" width="49%">
-<img src="./assets/languages.svg" alt="Language breakdown: PHP 40.2%, JavaScript 21.2%, Blade 20.6%, TypeScript 5.9%, HTML 3.5%" width="49%">
+<img src="./assets/stats.svg" alt="2,797 contributions, 2,431 commits, 317 pull requests, 1,783 this year, 56 repositories, 232 MB of source" width="49%">
+<img src="./assets/languages.svg" alt="Language breakdown: PHP 40.1%, JavaScript 21.2%, Blade 20.6%, TypeScript 5.9%, HTML 3.5%" width="49%">
 </div>
 
 > Every number on this page is **generated from the GitHub API by [a workflow in this repo](.github/workflows/refresh-cards.yml)**, refreshed every four hours — not by a third-party widget service.
@@ -78,7 +82,7 @@ Nine products, all live in production right now.
 
 ## 📱 Shipped to the stores
 
-Nine apps through review and out to real users — [all under **Scale Us** on Google Play](https://play.google.com/store/apps/developer?id=Scale+Us).
+Fourteen Android apps and one iOS release, all through store review and out to real users — across [**Scale Us**](https://play.google.com/store/apps/developer?id=Scale+Us) and [**Jasminder Singh Chhabra**](https://play.google.com/store/apps/developer?id=Jasminder+Singh+Chhabra) on Google Play.
 
 **On-demand mobility** — the Uber/Ola pattern, both sides of the marketplace
 
@@ -187,8 +191,8 @@ Four toolkits of free utilities that run **entirely in your browser**. No sign-u
 - **We own the pipes.** WhatsApp runs on our own Meta Business Manager, not rented through a BSP — so clients get direct pricing and aren't locked into a reseller's margins. Same principle everywhere: if it's core to the product, we own it.
 - **Performance is a feature, not a phase.** PageSpeed 99+ on mobile *and* desktop, layout shift near zero. Fast sites convert; that's the whole argument.
 - **One design system across nine products.** A single token set means the suite looks like one company instead of nine acquisitions — and a new product ships branded on day one.
-- **AI-assisted, not AI-generated.** I spec it, the model drafts it, I review and own every line that ships. Fifteen years of judgement is what makes moving that fast safe.
-- **Everything ships from Git.** Push and it's live in a minute. That discipline replaced fifteen years of edit-and-upload, and it's the single biggest reason one founder can hold twenty sites and fifteen apps at once.
+- **AI-assisted, not AI-generated.** I spec it, the model drafts it, I review and own every line that ships. Ten years of judgement is what makes moving that fast safe.
+- **Everything ships from Git.** Push and it's live in a minute. That discipline replaced years of edit-and-upload, and it's the single biggest reason one founder can hold twenty sites and fifteen apps at once.
 
 ---
 

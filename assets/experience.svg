@@ -16,8 +16,8 @@
   <rect width="1000" height="190" rx="16" fill="url(#gridX)"/>
   <circle cx="60" cy="180" r="170" fill="url(#blobX)" opacity=".6"/>
   <rect x=".5" y=".5" width="999" height="189" rx="15.5" fill="none" stroke="#7C3AED" stroke-opacity=".22"/>
-  <text x="44" y="52" font-family="Georgia,'Times New Roman',serif" font-size="26" fill="#FBFAF6">Fifteen years before the first commit</text>
-  <text x="44" y="76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="13.5" fill="#CBC5D6">This account opens in 2023. The work doesn&#8217;t &#8212; most of it shipped long before I moved the whole operation onto Git.</text>
+  <text x="44" y="52" font-family="Georgia,'Times New Roman',serif" font-size="26" fill="#FBFAF6">Fifteen years in commerce. Ten writing the code.</text>
+  <text x="44" y="76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="13.5" fill="#CBC5D6">Shipping commercially since 2016. This account opens in 2023 &#8212; most of the work predates it.</text>
   <line x1="44" y1="98" x2="956" y2="98" stroke="#3E3658"/>
   <rect x="44" y="118" width="4" height="44" rx="2" fill="#7C3AED"/>
   <text x="60" y="144" font-family="Georgia,'Times New Roman',serif" font-size="30" fill="#FBFAF6">600+</text>
