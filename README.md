@@ -35,12 +35,12 @@ Design system → nine products  ·  Git → production on every push
 <img src="./assets/languages.svg" alt="Language breakdown: PHP 40.2%, JavaScript 21.2%, Blade 20.6%, TypeScript 5.9%, HTML 3.5%" width="49%">
 </div>
 
-> These two cards are **generated from the GitHub API by [a workflow in this repo](.github/workflows/refresh-cards.yml)**, not by a third-party widget service.
-> That's deliberate: the popular `github-readme-stats` and `github-profile-trophy` instances were returning `503`/`402` when this profile was built, and neither can read private repositories — which is where 100% of this work lives.
+> Every number on this page is **generated from the GitHub API by [a workflow in this repo](.github/workflows/refresh-cards.yml)**, refreshed every four hours — not by a third-party widget service.
+> That's deliberate. The popular `github-readme-stats` and `github-profile-trophy` instances were returning `503`/`402` when this profile was built; none of them can read private repositories, which is where nearly all of this work lives; and the one hosted streak widget I did try was reporting a 54-day streak as 8 and a total ~700 short. Owning the query means the figures reconcile with GitHub's own graph, year for year.
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=Jasminder-Chhabra&theme=react&hide_border=true&background=1B1530&ring=7C3AED&fire=EC4899&currStreakLabel=A39BB3&sideLabels=CBC5D6&currStreakNum=FBFAF6&sideNums=FBFAF6&dates=6B6385" alt="GitHub streak" width="70%">
+<img src="./assets/streak.svg" alt="2,797 total contributions, 54-day current streak, 54-day longest streak, active on 62% of days, 111 contributions on the busiest day" width="100%">
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Jasminder-Chhabra&bg_color=1B1530&color=FBFAF6&line=7C3AED&point=EC4899&area_color=4C1D95&area=true&hide_border=true&custom_title=Commit%20activity%20—%20last%2031%20days" alt="Contribution activity graph" width="98%">
 

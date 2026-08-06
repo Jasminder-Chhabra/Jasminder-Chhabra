@@ -20,7 +20,7 @@ import sys
 import urllib.request
 import urllib.error
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 USER = "Jasminder-Chhabra"
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets")
@@ -55,6 +55,68 @@ def gql(query, token):
         headers={"Authorization": f"Bearer {token}", "User-Agent": "scaleus-profile-cards"},
     )
     return json.load(urllib.request.urlopen(req, timeout=30))
+
+
+def streaks(token, created_year):
+    """Day-by-day calendar → streaks and consistency, computed here rather than
+    trusted to a third-party widget. streak-stats.demolab.com was reporting an
+    8-day current streak against a real 55, and a total ~700 short."""
+    days = {}
+    this_year = datetime.now(timezone.utc).year
+    for y in range(created_year, this_year + 1):
+        q = ('query{viewer{contributionsCollection(from:"%d-01-01T00:00:00Z",'
+             'to:"%d-12-31T23:59:59Z"){contributionCalendar{weeks{contributionDays'
+             "{date contributionCount}}}}}}" % (y, y))
+        cal = gql(q, token)["data"]["viewer"]["contributionsCollection"]["contributionCalendar"]
+        for wk in cal["weeks"]:
+            for d in wk["contributionDays"]:
+                days[d["date"]] = d["contributionCount"]
+
+    today = datetime.now(timezone.utc).date()
+    days = {k: v for k, v in days.items() if date.fromisoformat(k) <= today}
+    keys = sorted(days)
+    if not keys:
+        return {}
+
+    best = cur = 0
+    best_from = best_to = cur_from = None
+    prev = None
+    for k in keys:
+        d = date.fromisoformat(k)
+        if days[k] > 0:
+            if prev is not None and (d - prev).days == 1 and cur > 0:
+                cur += 1
+            else:
+                cur, cur_from = 1, k
+            if cur > best:
+                best, best_from, best_to = cur, cur_from, k
+        else:
+            cur = 0
+        prev = d
+
+    # Walk back from the latest day; an empty today doesn't break the streak yet.
+    walk = date.fromisoformat(keys[-1])
+    if days.get(today.isoformat(), 0) == 0:
+        walk -= timedelta(days=1)
+    live = 0
+    live_from = None
+    while walk.isoformat() in days and days[walk.isoformat()] > 0:
+        live += 1
+        live_from = walk.isoformat()
+        walk -= timedelta(days=1)
+
+    active = sum(1 for v in days.values() if v > 0)
+    return {
+        "current_streak": live,
+        "current_streak_from": live_from,
+        "longest_streak": best,
+        "longest_from": best_from,
+        "longest_to": best_to,
+        "active_days": active,
+        "tracked_days": len(keys),
+        "best_day": max(days.values()),
+        "first_day": keys[0],
+    }
 
 
 def collect(token):
@@ -102,6 +164,7 @@ def collect(token):
         "code_bytes": sum(langs.values()),
         "languages": langs.most_common(20),
         "years": years,
+        **streaks(token, created_year),
     }
 
 
@@ -110,7 +173,8 @@ def collect(token):
 # figures from contributionsCollection) — not that the work disappeared. Keep the
 # larger value so a weak token can never quietly shrink the card.
 MONOTONIC = ("contributions", "contributions_this_year", "commits", "prs",
-             "private_repos", "public_repos", "code_bytes")
+             "private_repos", "public_repos", "code_bytes",
+             "longest_streak", "active_days", "tracked_days", "best_day")
 
 
 def merge(fresh, previous):
@@ -320,6 +384,50 @@ def experience_card(m):
     return "\n".join(p)
 
 
+def streak_card(m):
+    """Replaces the third-party streak widget, which was reporting a stale total
+    and an 8-day current streak against a real 55."""
+    w, h, u = 1000, 190, "K"
+
+    def pretty(iso):
+        if not iso:
+            return ""
+        d = date.fromisoformat(iso)
+        return d.strftime("%-d %b %Y") if os.name != "nt" else d.strftime("%d %b %Y")
+
+    active, tracked = m.get("active_days", 0), m.get("tracked_days", 1) or 1
+    pct = round(active / tracked * 100)
+    p = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Contribution consistency: {fmt(m["contributions"])} total, {m.get("current_streak",0)}-day current streak, {m.get("longest_streak",0)}-day longest streak">',
+        defs(u),
+        f'  <rect width="{w}" height="{h}" rx="16" fill="{INK_900}"/>',
+        f'  <rect width="{w}" height="{h}" rx="16" fill="url(#grid{u})"/>',
+        f'  <circle cx="{w-60}" cy="0" r="170" fill="url(#blob{u})" opacity=".7"/>',
+        f'  <rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="15.5" fill="none" stroke="{VIOLET}" stroke-opacity=".22"/>',
+        f'  <text x="32" y="44" font-family="{SERIF}" font-size="23" fill="{PAPER_0}">Consistency</text>',
+        f'  <text x="32" y="65" font-family="{MONO}" font-size="10" letter-spacing="1.2" fill="{VIOLET}">'
+        f'COMPUTED FROM THE GITHUB API, NOT A THIRD-PARTY WIDGET</text>',
+        f'  <line x1="32" y1="80" x2="{w-32}" y2="80" stroke="{INK_700}"/>',
+    ]
+    tiles = [
+        (fmt(m["contributions"]), "TOTAL CONTRIBUTIONS", f'since {pretty(m.get("first_day"))}', VIOLET),
+        (str(m.get("current_streak", 0)), "DAY CURRENT STREAK", f'from {pretty(m.get("current_streak_from"))}', CORAL),
+        (str(m.get("longest_streak", 0)), "DAY LONGEST STREAK", f'{pretty(m.get("longest_from"))}', AMBER),
+        (f"{pct}%", "OF DAYS ACTIVE", f'{fmt(active)} of {fmt(tracked)} days', SKY),
+        (fmt(m.get("best_day", 0)), "BUSIEST SINGLE DAY", "peak output", CYAN),
+    ]
+    for i, (val, lbl, sub, col) in enumerate(tiles):
+        cx = 32 + i * 188
+        p += [
+            f'  <rect x="{cx}" y="100" width="4" height="58" rx="2" fill="{col}"/>',
+            f'  <text x="{cx+15}" y="128" font-family="{SERIF}" font-size="30" fill="{PAPER_0}">{val}</text>',
+            f'  <text x="{cx+15}" y="145" font-family="{MONO}" font-size="8.5" letter-spacing=".8" fill="{INK_400}">{lbl}</text>',
+            f'  <text x="{cx+15}" y="158" font-family="{SANS}" font-size="9.5" fill="{INK_700}">{esc(sub)}</text>',
+        ]
+    p.append("</svg>")
+    return "\n".join(p)
+
+
 def main():
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     metrics_path = os.path.join(OUT, "metrics.json")
@@ -345,7 +453,8 @@ def main():
     with open(metrics_path, "w") as fh:
         json.dump(m, fh, indent=2)
     cards = (("hero", hero(m)), ("stats", stats_card(m)),
-             ("languages", lang_card(m)), ("experience", experience_card(m)))
+             ("languages", lang_card(m)), ("experience", experience_card(m)),
+             ("streak", streak_card(m)))
     for name, svg in cards:
         with open(os.path.join(OUT, f"{name}.svg"), "w") as fh:
             fh.write(svg)
