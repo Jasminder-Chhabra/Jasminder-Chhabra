@@ -1,45 +1,45 @@
 {
-  "generated": "06 Aug 2026",
-  "contributions": 2798,
-  "contributions_this_year": 1785,
+  "generated": "10 Aug 2026",
+  "contributions": 3006,
+  "contributions_this_year": 1993,
   "commits": 2433,
   "prs": 317,
-  "private_repos": 50,
+  "private_repos": 53,
   "public_repos": 6,
   "since": 2023,
-  "code_bytes": 231596078,
+  "code_bytes": 246744246,
   "languages": [
     [
       "PHP",
-      92976461
-    ],
-    [
-      "JavaScript",
-      49036357
+      100288657
     ],
     [
       "Blade",
-      47687754
+      51680355
+    ],
+    [
+      "JavaScript",
+      49138158
     ],
     [
       "TypeScript",
       13605028
     ],
     [
-      "HTML",
-      8142608
-    ],
-    [
       "CSS",
-      7056595
+      8801018
     ],
     [
-      "SCSS",
-      4701525
+      "HTML",
+      8190232
     ],
     [
       "Dart",
-      4576403
+      6422938
+    ],
+    [
+      "SCSS",
+      4701821
     ],
     [
       "C",
@@ -55,7 +55,7 @@
     ],
     [
       "Java",
-      566340
+      632811
     ],
     [
       "CMake",
@@ -63,11 +63,11 @@
     ],
     [
       "Kotlin",
-      281306
+      284406
     ],
     [
       "Python",
-      246208
+      250380
     ],
     [
       "Hack",
@@ -75,34 +75,34 @@
     ],
     [
       "Ruby",
-      26656
+      30960
+    ],
+    [
+      "Swift",
+      24049
+    ],
+    [
+      "Shell",
+      15754
     ],
     [
       "PLpgSQL",
       14938
-    ],
-    [
-      "Shell",
-      14874
-    ],
-    [
-      "Dockerfile",
-      2796
     ]
   ],
   "years": {
     "2023": 103,
     "2024": 345,
     "2025": 565,
-    "2026": 1785
+    "2026": 1993
   },
-  "current_streak": 54,
+  "current_streak": 58,
   "current_streak_from": "2026-06-14",
-  "longest_streak": 54,
+  "longest_streak": 58,
   "longest_from": "2026-06-14",
-  "longest_to": "2026-08-06",
-  "active_days": 815,
-  "tracked_days": 1314,
+  "longest_to": "2026-08-10",
+  "active_days": 819,
+  "tracked_days": 1318,
   "best_day": 111,
   "first_day": "2023-01-01"
 }
