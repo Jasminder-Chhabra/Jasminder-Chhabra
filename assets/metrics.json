@@ -1,37 +1,37 @@
 {
-  "generated": "10 Aug 2026",
-  "contributions": 3006,
-  "contributions_this_year": 1993,
+  "generated": "17 Aug 2026",
+  "contributions": 3118,
+  "contributions_this_year": 2105,
   "commits": 2433,
   "prs": 317,
-  "private_repos": 53,
+  "private_repos": 56,
   "public_repos": 6,
   "since": 2023,
-  "code_bytes": 246744246,
+  "code_bytes": 252057064,
   "languages": [
     [
       "PHP",
-      100288657
+      102149919
     ],
     [
       "Blade",
-      51680355
+      53844824
     ],
     [
       "JavaScript",
-      49138158
+      49543401
     ],
     [
       "TypeScript",
-      13605028
+      13607588
     ],
     [
       "CSS",
-      8801018
+      9269118
     ],
     [
       "HTML",
-      8190232
+      8567783
     ],
     [
       "Dart",
@@ -67,7 +67,7 @@
     ],
     [
       "Python",
-      250380
+      284013
     ],
     [
       "Hack",
@@ -94,15 +94,15 @@
     "2023": 103,
     "2024": 345,
     "2025": 565,
-    "2026": 1993
+    "2026": 2105
   },
-  "current_streak": 58,
-  "current_streak_from": "2026-06-14",
-  "longest_streak": 58,
+  "current_streak": 1,
+  "current_streak_from": "2026-08-17",
+  "longest_streak": 63,
   "longest_from": "2026-06-14",
-  "longest_to": "2026-08-10",
-  "active_days": 819,
-  "tracked_days": 1318,
+  "longest_to": "2026-08-15",
+  "active_days": 825,
+  "tracked_days": 1325,
   "best_day": 111,
   "first_day": "2023-01-01"
 }
