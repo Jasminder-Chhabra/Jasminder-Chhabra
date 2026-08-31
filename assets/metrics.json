@@ -1,29 +1,29 @@
 {
-  "generated": "24 Aug 2026",
-  "contributions": 3190,
-  "contributions_this_year": 2177,
+  "generated": "31 Aug 2026",
+  "contributions": 3209,
+  "contributions_this_year": 2196,
   "commits": 2433,
   "prs": 317,
   "private_repos": 61,
   "public_repos": 6,
   "since": 2023,
-  "code_bytes": 261705215,
+  "code_bytes": 261772754,
   "languages": [
     [
       "PHP",
-      104698772
+      104761488
     ],
     [
       "Blade",
-      57332748
+      57336663
     ],
     [
       "JavaScript",
-      49781324
+      49781253
     ],
     [
       "TypeScript",
-      13607920
+      13607991
     ],
     [
       "Dart",
@@ -83,7 +83,7 @@
     ],
     [
       "Shell",
-      15754
+      16662
     ],
     [
       "PLpgSQL",
@@ -94,15 +94,15 @@
     "2023": 103,
     "2024": 345,
     "2025": 565,
-    "2026": 2177
+    "2026": 2196
   },
   "current_streak": 0,
   "current_streak_from": null,
   "longest_streak": 63,
   "longest_from": "2026-06-14",
   "longest_to": "2026-08-15",
-  "active_days": 829,
-  "tracked_days": 1332,
+  "active_days": 833,
+  "tracked_days": 1339,
   "best_day": 111,
   "first_day": "2023-01-01"
 }
