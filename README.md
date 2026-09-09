@@ -17,6 +17,8 @@ I run **[Scale Us Technologies LLP](https://scaleus.in)** out of India — and I
 
 Alongside that, I build for founders abroad — **thirteen products live across the UK, USA, UAE, Singapore, Saudi Arabia, Kenya and Australia**, in agri-tech traceability, legal AI, ESG reporting, clean energy and commodity trading.
 
+And because "we'll make it interactive" means nothing on a slide, there's a **[Design Lab](#-design-lab--interaction-demonstrated)** of fourteen working demos — drivable 3D worlds, scroll-driven cinematography, WebGPU depth scanning — every one a real page you can scroll.
+
 Fifteen years in e-commerce and senior management taught me what a business actually needs; I've spent the last ten building it myself, since 2016. These days I write code **with AI in the loop** — spec, generate, review, ship — which is how one founder keeps thirteen products moving at once.
 
 The graph below starts in 2023, because that's when I moved the operation onto Git. The work started well before it.
@@ -28,7 +30,7 @@ Laravel + Blade monoliths  ·  Node/TypeScript services  ·  Flutter apps
 Design system → thirteen products  ·  Git → production on every push
 ```
 
-<img src="./assets/timeline.svg" alt="Career timeline: e-commerce and senior management from 2011, first production code 2016, Scale Us Technologies founded 2020, moved onto Git 2023, thirteen products and twenty-one apps live by 2026" width="100%">
+<img src="./assets/timeline.svg" alt="Career timeline: e-commerce and senior management from 2011, first production code 2016, Scale Us Technologies founded 2020, moved onto Git 2023, thirteen products and twenty-two apps live by 2026" width="100%">
 
 <img src="./assets/experience.svg" alt="Fifteen years in commerce, ten writing the code: 600+ projects delivered, 50,000+ hours of code, 60+ countries served, 20+ AI products live, 4.9 out of 5 client rating" width="100%">
 
@@ -88,52 +90,54 @@ Thirteen products, all live in production right now.
 
 ## 📱 Shipped to the stores
 
-Twenty Android apps and one iOS release, all through store review and out to real users — across [**Scale Us**](https://play.google.com/store/apps/developer?id=Scale+Us) and [**Jasminder Singh Chhabra**](https://play.google.com/store/apps/developer?id=Jasminder+Singh+Chhabra) on Google Play.
+Twenty-two store listings through review and out to real users — across [**Scale Us**](https://play.google.com/store/apps/developer?id=Scale+Us) and [**Jasminder Singh Chhabra**](https://play.google.com/store/apps/developer?id=Jasminder+Singh+Chhabra) on Google Play, plus iOS.
+
+Every one is **Flutter, from a single codebase** — so each ships to both platforms; the links below are the listings live today.
 
 **On-demand mobility** — the Uber/Ola pattern, both sides of the marketplace
 
 | App | | |
 |---|---|---|
-| **Quick Driver** — customer app, live tracking & trip management | iOS · Android | [App Store](https://apps.apple.com/in/app/quick-driver-in/id6758759788) · [Google Play](https://play.google.com/store/apps/details?id=com.quickdriver.scaleuscustomer) |
-| **Quick Rider** — the driver-side app | Android | [Google Play](https://play.google.com/store/apps/details?id=com.quickdriver.scaleusdriver) |
-| **Scale Driver** — verified driver booking, hourly or full-day | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scaledrivercustomer) |
+| **Quick Driver** — customer app, live tracking & trip management | Flutter · iOS + Android | [App Store](https://apps.apple.com/in/app/quick-driver-in/id6758759788) · [Google Play](https://play.google.com/store/apps/details?id=com.quickdriver.scaleuscustomer) |
+| **Quick Rider** — the driver-side app | Flutter · iOS + Android | [App Store](https://apps.apple.com/in/app/quick-driver-partner/id6758837751) · [Google Play](https://play.google.com/store/apps/details?id=com.quickdriver.scaleusdriver) |
+| **Scale Driver** — verified driver booking, hourly or full-day | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scaledrivercustomer) |
 
 **Multi-vendor commerce** — a full three-sided marketplace
 
 | App | | |
 |---|---|---|
-| **Scale Local** — customer storefront | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal) |
-| **Scale Local Rider** — delivery app | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal.rider) |
-| **Scale Local Seller** — vendor/merchant app | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal.seller) |
-| **Scale Shop Seller** — storefront management for merchants | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scaleshop.seller) |
+| **Scale Local** — customer storefront | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal) |
+| **Scale Local Rider** — delivery app | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal.rider) |
+| **Scale Local Seller** — vendor/merchant app | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal.seller) |
+| **Scale Shop Seller** — storefront management for merchants | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scaleshop.seller) |
 
 **Games & rewards**
 
 | App | | |
 |---|---|---|
-| **GameBox** — 50+ games, play-and-earn rewards | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.gamevault) |
-| **Zabla Super Deluxe** | Android | [Google Play](https://play.google.com/store/apps/details?id=com.zablasuperdelux.game) |
-| **Word Puzzle** | Android | [Google Play](https://play.google.com/store/apps/details?id=scaleus.wordsearch) |
-| **Neon Maze** | Android | [Google Play](https://play.google.com/store/apps/details?id=com.neonmaze.game) |
-| **Stacks** | Android | [Google Play](https://play.google.com/store/apps/details?id=com.stacks.game) |
+| **GameBox** — 50+ games, play-and-earn rewards | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.gamevault) |
+| **Zabla Super Deluxe** | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.zablasuperdelux.game) |
+| **Word Puzzle** | Flutter | [Google Play](https://play.google.com/store/apps/details?id=scaleus.wordsearch) |
+| **Neon Maze** | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.neonmaze.game) |
+| **Stacks** | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.stacks.game) |
 
 **Kids, learning & fitness**
 
 | App | | |
 |---|---|---|
-| **Scale Little Learners** — early-years learning | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.littlelearners) |
-| **Preschool Fun Learn** | Android | [Google Play](https://play.google.com/store/apps/details?id=com.kidslearning.kidsplay.scaleus.preschool.funlearn) |
-| **Rainbow Rush** — drawing & colour play | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.kidsdrawing1) |
-| **Actyv** — personal trainer & fitness | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.actyv) |
-| **Scale Nutrition** — diet plans and nutrition tracking | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalenutrition) |
+| **Scale Little Learners** — early-years learning | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.littlelearners) |
+| **Preschool Fun Learn** | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.kidslearning.kidsplay.scaleus.preschool.funlearn) |
+| **Rainbow Rush** — drawing & colour play | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.kidsdrawing1) |
+| **Actyv** — personal trainer & fitness | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.actyv) |
+| **Scale Nutrition** — diet plans and nutrition tracking | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalenutrition) |
 
 **Business & media**
 
 | App | | |
 |---|---|---|
-| **Scale HRMS** — attendance, leave and payroll in your pocket | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalehrms) |
-| **Scale Shorts** — short-video creation and feeds | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scaleshorts) |
-| **Scale Book** — booking and appointments | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalebook) |
+| **Scale HRMS** — attendance, leave and payroll in your pocket | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalehrms) |
+| **Scale Shorts** — short-video creation and feeds | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scaleshorts) |
+| **Scale Book** — booking and appointments | Flutter | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalebook) |
 
 <div align="center">
 <a href="https://play.google.com/store/apps/developer?id=Scale+Us"><img src="https://img.shields.io/badge/Google_Play_—_Scale_Us-7C3AED?style=for-the-badge&logo=googleplay&logoColor=white" alt="Scale Us on Google Play"></a>
@@ -194,7 +198,32 @@ Full working prototypes I build to pitch an idea or scope a build — not client
 
 </div>
 
-Plus **14 interactive WebGL/scroll demos** — drivable 3D worlds, scroll-driven cinematography, depth-map scanning, liquid glass — in the [portfolio](https://scaleus.in/portfolio).
+---
+
+## 🎨 Design Lab — interaction, demonstrated
+
+Working concepts, not mockups. Every one is a real page you can scroll — built to show what a site *can* do before we build yours.
+
+| Demo | What it does | Built with |
+|---|---|---|
+| **[Drivable 3D world](https://studio.scaleus.in/drive/)** | A world you steer through instead of scrolling — real-time physics, a controllable vehicle, project billboards you drive up to | Three.js · Physics |
+| **[Scroll-driven 3D world](https://studio.scaleus.in/kage/)** | A live 3D scene the scroll walks you through — temple, lantern light, rain and drifting leaves, all in code, no video | Three.js · WebGL |
+| **[Cinematic horizontal scroll](https://portfolio1.scaleus.in/)** | The page moves sideways chapter by chapter, with an optional soundtrack and progress counter | Horizontal scroll · Sound |
+| **[Depth-map scanning](https://studio.scaleus.in/scan/effect1/)** | A scanning light sweeps a flat photograph and reveals its depth — a 2D photo that behaves like 3D | WebGPU · Depth map |
+| **[Perspective grid scroll](https://studio.scaleus.in/grid/)** | Image grids tilt into perspective and reflow — the third axis is driven by scroll position | GSAP · Perspective |
+| **[Layout choreography](https://studio.scaleus.in/layouts/)** | One set of images, many layouts. The grid re-forms as you scroll — the layout itself is the animation | Layout flip · GSAP |
+| **[Liquid glass](https://portfolio1.scaleus.in/project2/)** | Frosted, refracting panels over live video that shift with the cursor — the iOS-26 glass language in a browser | Glassmorphism · Video |
+| **[Object scroll](https://portfolio1.scaleus.in/demo2/)** | A product rotates, opens and reassembles as you scroll — the scrollbar drives an animation timeline | 3D object · Scroll timeline |
+| **[Parallax depth](https://portfolio1.scaleus.in/demo4/)** | Foreground, subject and background move at different speeds, so a flat page reads as depth | Parallax · Lightweight |
+| **[Colour-shift scroll](https://portfolio1.scaleus.in/demo5/)** | The background crossfades from one brand colour to the next as sections pass | Colour transitions |
+| **[Snap sections](https://portfolio1.scaleus.in/demo9/)** | Full-height panels that snap into place, so the visitor always sees a finished composition | Scroll snap · Full-bleed |
+| **[Creative layout](https://portfolio1.scaleus.in/demo10/)** | Editorial, off-grid layout with oversized type and asymmetric imagery — art-directed, not template-shaped | Editorial · Big type |
+| **[Scroll techniques](https://portfolio1.scaleus.in/demo11/)** | A sampler putting pinning, reveals, sticky stacks and speed changes side by side | Motion sampler |
+| **[Before & after](https://portfolio1.scaleus.in/demo14/)** | Drag-to-compare sliders — the pattern that sells restoration, renovation and dentistry | Comparison · Drag |
+
+<div align="center">
+<a href="https://scaleus.in/portfolio/design"><img src="https://img.shields.io/badge/Browse_the_Design_Lab-7C3AED?style=for-the-badge&logoColor=white" alt="Browse the Design Lab"></a>
+</div>
 
 ---
 
@@ -236,7 +265,7 @@ Four toolkits of free utilities that run **entirely in your browser**. No sign-u
 - **Performance is a feature, not a phase.** PageSpeed 99+ on mobile *and* desktop, layout shift near zero. Fast sites convert; that's the whole argument.
 - **One design system across thirteen products.** A single token set means the suite looks like one company instead of thirteen acquisitions — and a new product ships branded on day one.
 - **AI-assisted, not AI-generated.** I spec it, the model drafts it, I review and own every line that ships. Ten years of judgement is what makes moving that fast safe.
-- **Everything ships from Git.** Push and it's live in a minute. That discipline replaced years of edit-and-upload, and it's the single biggest reason one founder can hold twenty-five sites and twenty-one apps at once.
+- **Everything ships from Git.** Push and it's live in a minute. That discipline replaced years of edit-and-upload, and it's the single biggest reason one founder can hold twenty-five sites and twenty-two apps at once.
 
 ---
 

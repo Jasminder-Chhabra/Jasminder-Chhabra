@@ -301,7 +301,7 @@ def hero(m):
     # never collide with the tagline, whatever font the renderer substitutes.
     parts.append(f'  <line x1="672" y1="52" x2="672" y2="208" stroke="{VIOLET}" stroke-opacity=".3"/>')
     # Verified by hand: every URL returns 200 and every store listing resolves.
-    stats = [("13", "products in the suite"), ("25", "live production sites"), ("21", "apps on the stores")]
+    stats = [("13", "products in the suite"), ("25", "live production sites"), ("22", "apps on the stores")]
     for i, (n, lbl) in enumerate(stats):
         cy = 96 + i * 46
         parts += [
@@ -434,7 +434,7 @@ def timeline_card(m):
         return x0 + max(0.0, min(1.0, t)) * (x1 - x0)
 
     p = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Career timeline: e-commerce and senior management from 2011, first production code in 2016, Scale Us Technologies founded 2020, moved onto Git in 2023, thirteen products and twenty-one apps by {Y1}">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Career timeline: e-commerce and senior management from 2011, first production code in 2016, Scale Us Technologies founded 2020, moved onto Git in 2023, thirteen products and twenty-two apps by {Y1}">',
         defs(u),
         f'  <rect width="{w}" height="{h}" rx="16" fill="{INK_950}"/>',
         f'  <rect width="{w}" height="{h}" rx="16" fill="url(#grid{u})"/>',
@@ -469,7 +469,7 @@ def timeline_card(m):
         (2016, "First production code", "freelance &amp; agency delivery", MINT, "up"),
         (2020, "Scale Us Technologies LLP", "founded", AMBER, "down"),
         (2023, "Everything moves onto Git", "this account opens", CORAL, "up"),
-        (Y1, "13 products &#183; 25 sites &#183; 21 apps", "live in production", CYAN, "down"),
+        (Y1, "13 products &#183; 25 sites &#183; 22 apps", "live in production", CYAN, "down"),
     ]
     for year, title, sub, col, side in marks:
         gx = X(year)
