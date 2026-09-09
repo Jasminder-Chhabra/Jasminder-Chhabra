@@ -7,15 +7,17 @@
 <a href="https://scaleus.in/products"><img src="https://img.shields.io/badge/The_Product_Suite-1B1530?style=for-the-badge&logo=rocket&logoColor=7C3AED" alt="Products"></a>
 <a href="https://scaleus.in/portfolio"><img src="https://img.shields.io/badge/Portfolio-1B1530?style=for-the-badge&logo=polywork&logoColor=7C3AED" alt="Portfolio"></a>
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=21&pause=1200&color=7C3AED&center=true&vCenter=true&width=760&lines=Founder+%26+CEO+at+Scale+Us+Technologies+LLP;9+SaaS+products+live+in+production;600%2B+software+projects+delivered+across+60%2B+countries;I+still+write+and+deploy+the+code+myself" alt="Founder and CEO at Scale Us Technologies. Nine SaaS products live in production. 600+ projects delivered across 60+ countries. I still write and deploy the code myself.">
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=21&pause=1200&color=7C3AED&center=true&vCenter=true&width=760&lines=Founder+%26+CEO+at+Scale+Us+Technologies+LLP;13+SaaS+products+live+in+production;600%2B+projects+delivered+across+60%2B+countries;Products+shipped+for+teams+in+7+countries;I+still+write+and+deploy+the+code+myself" alt="Founder and CEO at Scale Us Technologies. Thirteen SaaS products live in production. 600+ projects delivered across 60+ countries. Products shipped for teams in 7 countries. I still write and deploy the code myself.">
 
 </div>
 
 ---
 
-I run **[Scale Us Technologies LLP](https://scaleus.in)** out of India — and I'm the one shipping. Nine products in the suite, every one of them live and paying its own way: AI voice agents that answer phones, a WhatsApp Business platform on our own Meta Business Manager, social publishing across nine networks, restaurant ordering, virtual tours, LMS, analytics, invoicing and email marketing.
+I run **[Scale Us Technologies LLP](https://scaleus.in)** out of India — and I'm the one shipping. Thirteen products in the suite, every one of them live and paying its own way: AI voice agents that answer phones, a WhatsApp Business platform on our own Meta Business Manager, social publishing across nine networks, restaurant ordering, HRMS and payroll, virtual tours, LMS, analytics, invoicing, QR, short-video and dating platforms.
 
-Fifteen years in e-commerce and senior management taught me what a business actually needs; I've spent the last ten building it myself, since 2016. These days I write code **with AI in the loop** — spec, generate, review, ship — which is how one founder keeps nine products moving at once.
+Alongside that, I build for founders abroad — **thirteen products live across the UK, USA, UAE, Singapore, Saudi Arabia, Kenya and Australia**, in agri-tech traceability, legal AI, ESG reporting, clean energy and commodity trading.
+
+Fifteen years in e-commerce and senior management taught me what a business actually needs; I've spent the last ten building it myself, since 2016. These days I write code **with AI in the loop** — spec, generate, review, ship — which is how one founder keeps thirteen products moving at once.
 
 The graph below starts in 2023, because that's when I moved the operation onto Git. The work started well before it.
 
@@ -23,10 +25,10 @@ Most of what I build is **private and commercial**, so the numbers below are the
 
 ```
 Laravel + Blade monoliths  ·  Node/TypeScript services  ·  Flutter apps
-Design system → nine products  ·  Git → production on every push
+Design system → thirteen products  ·  Git → production on every push
 ```
 
-<img src="./assets/timeline.svg" alt="Career timeline: e-commerce and senior management from 2011, first production code 2016, Scale Us Technologies founded 2020, moved onto Git 2023, nine products and fifteen apps live by 2026" width="100%">
+<img src="./assets/timeline.svg" alt="Career timeline: e-commerce and senior management from 2011, first production code 2016, Scale Us Technologies founded 2020, moved onto Git 2023, thirteen products and twenty-one apps live by 2026" width="100%">
 
 <img src="./assets/experience.svg" alt="Fifteen years in commerce, ten writing the code: 600+ projects delivered, 50,000+ hours of code, 60+ countries served, 20+ AI products live, 4.9 out of 5 client rating" width="100%">
 
@@ -35,7 +37,7 @@ Design system → nine products  ·  Git → production on every push
 ## 📊 The numbers
 
 <div align="center">
-<img src="./assets/stats.svg" alt="2,797 contributions, 2,431 commits, 317 pull requests, 1,783 this year, 56 repositories, 232 MB of source" width="49%">
+<img src="./assets/stats.svg" alt="3,276 contributions, 2,147 commits, 322 pull requests, 2,263 this year, 73 repositories, 274 MB of source" width="49%">
 <img src="./assets/languages.svg" alt="Language breakdown: PHP 40.1%, JavaScript 21.2%, Blade 20.6%, TypeScript 5.9%, HTML 3.5%" width="49%">
 </div>
 
@@ -44,9 +46,9 @@ Design system → nine products  ·  Git → production on every push
 
 <div align="center">
 
-<img src="./assets/streak.svg" alt="2,797 total contributions, 54-day current streak, 54-day longest streak, active on 62% of days, 111 contributions on the busiest day" width="100%">
+<img src="./assets/streak.svg" alt="3,276 total contributions, 2-day current streak, 63-day longest streak, active on 62% of days, 111 contributions on the busiest day" width="100%">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Jasminder-Chhabra&bg_color=1B1530&color=FBFAF6&line=7C3AED&point=EC4899&area_color=4C1D95&area=true&hide_border=true&custom_title=Commit%20activity%20—%20last%2031%20days" alt="Contribution activity graph" width="98%">
+<img src="./assets/activity.svg" alt="Contribution activity over the last 120 days, 1,895 contributions, peak 111 in a single day" width="100%">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Jasminder-Chhabra/Jasminder-Chhabra/output/snake-dark.svg">
@@ -60,7 +62,7 @@ Design system → nine products  ·  Git → production on every push
 
 ## 🚀 The Scale Us suite
 
-Nine products, all live in production right now.
+Thirteen products, all live in production right now.
 
 | Product | What it does | Live |
 |---|---|---|
@@ -73,16 +75,20 @@ Nine products, all live in production right now.
 | **Scale LMS** | Learning platform with tutor marketplace, live sessions and self-paced courses | [lms.scaleus.in](https://lms.scaleus.in) |
 | **Scale Analytics** | Privacy-first web + product analytics — real-time dashboards, heatmaps, session replay | [analytics.scaleus.in](https://analytics.scaleus.in) |
 | **Scale Invoice** | Invoicing for freelancers and teams, with GST support and recurring billing | [invoice.scaleus.in](https://invoice.scaleus.in) |
+| **Scale HR** | Full HRMS — attendance, leave ledger, payroll cycles, payslips, projects and CRM | [hr.scaleus.in](https://hr.scaleus.in) |
+| **Scale QR** | QR generator + dynamic short links — scan analytics, password-protected and expiring codes | [qr.scaleus.in](https://qr.scaleus.in) |
+| **Scale Shorts** | Short-video platform with creator tools, feeds and monetisation | [shorts.scaleus.in](https://shorts.scaleus.in) |
+| **Scale Dating** | Dating platform — matching, chat, moderation and subscriptions | [dating.scaleus.in](https://dating.scaleus.in) |
 
 <div align="center">
-<a href="https://scaleus.in/products"><img src="https://img.shields.io/badge/Browse_all_9_products-7C3AED?style=for-the-badge&logoColor=white" alt="Browse all products"></a>
+<a href="https://scaleus.in/products"><img src="https://img.shields.io/badge/Browse_all_products-7C3AED?style=for-the-badge&logoColor=white" alt="Browse all products"></a>
 </div>
 
 ---
 
 ## 📱 Shipped to the stores
 
-Fourteen Android apps and one iOS release, all through store review and out to real users — across [**Scale Us**](https://play.google.com/store/apps/developer?id=Scale+Us) and [**Jasminder Singh Chhabra**](https://play.google.com/store/apps/developer?id=Jasminder+Singh+Chhabra) on Google Play.
+Twenty Android apps and one iOS release, all through store review and out to real users — across [**Scale Us**](https://play.google.com/store/apps/developer?id=Scale+Us) and [**Jasminder Singh Chhabra**](https://play.google.com/store/apps/developer?id=Jasminder+Singh+Chhabra) on Google Play.
 
 **On-demand mobility** — the Uber/Ola pattern, both sides of the marketplace
 
@@ -90,6 +96,7 @@ Fourteen Android apps and one iOS release, all through store review and out to r
 |---|---|---|
 | **Quick Driver** — customer app, live tracking & trip management | iOS · Android | [App Store](https://apps.apple.com/in/app/quick-driver-in/id6758759788) · [Google Play](https://play.google.com/store/apps/details?id=com.quickdriver.scaleuscustomer) |
 | **Quick Rider** — the driver-side app | Android | [Google Play](https://play.google.com/store/apps/details?id=com.quickdriver.scaleusdriver) |
+| **Scale Driver** — verified driver booking, hourly or full-day | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scaledrivercustomer) |
 
 **Multi-vendor commerce** — a full three-sided marketplace
 
@@ -98,6 +105,7 @@ Fourteen Android apps and one iOS release, all through store review and out to r
 | **Scale Local** — customer storefront | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal) |
 | **Scale Local Rider** — delivery app | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal.rider) |
 | **Scale Local Seller** — vendor/merchant app | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalelocal.seller) |
+| **Scale Shop Seller** — storefront management for merchants | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scaleshop.seller) |
 
 **Games & rewards**
 
@@ -117,6 +125,15 @@ Fourteen Android apps and one iOS release, all through store review and out to r
 | **Preschool Fun Learn** | Android | [Google Play](https://play.google.com/store/apps/details?id=com.kidslearning.kidsplay.scaleus.preschool.funlearn) |
 | **Rainbow Rush** — drawing & colour play | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.kidsdrawing1) |
 | **Actyv** — personal trainer & fitness | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.actyv) |
+| **Scale Nutrition** — diet plans and nutrition tracking | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalenutrition) |
+
+**Business & media**
+
+| App | | |
+|---|---|---|
+| **Scale HRMS** — attendance, leave and payroll in your pocket | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalehrms) |
+| **Scale Shorts** — short-video creation and feeds | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scaleshorts) |
+| **Scale Book** — booking and appointments | Android | [Google Play](https://play.google.com/store/apps/details?id=com.scaleus.scalebook) |
 
 <div align="center">
 <a href="https://play.google.com/store/apps/developer?id=Scale+Us"><img src="https://img.shields.io/badge/Google_Play_—_Scale_Us-7C3AED?style=for-the-badge&logo=googleplay&logoColor=white" alt="Scale Us on Google Play"></a>
@@ -125,32 +142,59 @@ Fourteen Android apps and one iOS release, all through store review and out to r
 
 ---
 
+## 🌍 Built for founders abroad
+
+Thirteen products live across **seven countries**, in domains where the hard part is the domain — not the framework.
+
+| Product | What it does | Sector | Where |
+|---|---|---|---|
+| **[Materra](https://www.materra.tech)** | Climate-resilient cotton traceability, farm to fabric | AgriTech | 🇬🇧 UK |
+| **[Qanooni](https://qanooni.ai)** | Legal AI for drafting and research, English + Arabic | Legal AI | 🇦🇪 UAE |
+| **[Corpstage](https://corpstage.com)** | ESG and sustainability reporting for enterprises | ESG · Compliance | 🇸🇬 Singapore |
+| **[Naqaa Solutions](https://www.naqaa.com.sa)** | Corporate sustainability and recycling dashboards | Sustainability | 🇸🇦 Saudi Arabia |
+| **[PetroPal](https://petropal.africa)** | Wholesale petroleum trading with live pricing | Commodity Trading | 🇰🇪 Kenya |
+| **Secure2Go** | IoT lone-worker safety platform | Safety · IoT | 🇦🇺 Australia |
+| **[Bonding Health](https://bondinghealth.com)** | ADHD parenting guidance and tracking | HealthTech | 🇺🇸 USA |
+| **[SportLync](https://sportlync.com)** | Social matching for golf, tennis and pickleball | Social | 🇺🇸 USA |
+| **[WindEverest](https://www.windeverest.com)** | EV charging optimised against wind-energy surplus | Clean Energy | 🇺🇸 USA |
+| **[Boardsi](https://boardsi.com)** | Executive board-placement matching | HR Tech | 🇺🇸 USA |
+| **Xicomm** | Wholesale telecom carrier platform | Telecom | 🇺🇸 USA |
+| **Sourceasy** | Apparel manufacturing marketplace | Supply Chain | 🇺🇸 USA |
+| **[getBeauty.ai](https://www.getbeauty.ai)** | AI aesthetic-procedure simulation and booking | AI Health | 🌐 Global |
+
+---
+
 ## 🌐 Client work on the web
 
-Twenty live sites and counting — commerce, custom platforms and creative builds.
+Twenty-five live sites and counting — commerce, custom platforms and creative builds.
 
 | | |
 |---|---|
 | **[texmopipe.com](https://texmopipe.com)** — industrial e-commerce, plus a full [**bidding portal**](https://bidding.texmopipe.com) | E-commerce · Custom |
 | **[satnaamherbals.co.in](https://satnaamherbals.co.in)** — custom-built commerce platform | Custom e-commerce |
 | **[sahejfashion.com](https://sahejfashion.com)** · **[anphar.com](https://anphar.com)** · **[vyasayurved.com](https://vyasayurved.com)** | E-commerce |
-| **[khalsawale.com](https://khalsawale.com)** · **[thekitchenfoods.com](https://thekitchenfoods.com)** | E-commerce |
+| **[khalsawale.com](https://khalsawale.com)** — industrial & medical supply | E-commerce |
+| **[belloricco.com](https://belloricco.com)** — Shopify fashion storefront | E-commerce |
+| **[livingwater.scaleus.in](https://livingwater.scaleus.in)** — lead-gen for pressure-washing services 🇨🇦 | Services |
 | **[portfolio1.scaleus.in](https://portfolio1.scaleus.in)** — ten creative site builds in one showcase | Creative · WordPress |
 
 ---
 
-## 🏗️ Selected work
+## 🏗️ Concept builds & pitch prototypes
 
-From the [Scale Us portfolio](https://scaleus.in/portfolio) — **600+ projects delivered**, teams in **60+ countries**, **4.9★** rated.
+Full working prototypes I build to pitch an idea or scope a build — not client deliveries. Each one is live and clickable.
 
 <div align="center">
 
 | | | |
 |---|---|---|
-| **BulkBazaar**<br><sub>B2B wholesale marketplace — catalogues, bulk pricing, orders, payments</sub> | **Clinic Saathi**<br><sub>AI WhatsApp agent booking appointments & answering patient queries</sub> | **APMC Mandi**<br><sub>Digitising agri-mandi arrivals, auctions, weighing and e-payments</sub> |
-| **RentSetu**<br><sub>Rental marketplace — verified listings, bookings, online payments</sub> | **Yatra Setu**<br><sub>Travel booking — itineraries, packages, traveller management</sub> | **Quick Driver**<br><sub>On-demand mobility with customer + driver apps and live tracking</sub> |
+| **[BulkBazaar](https://bazaar.scaleus.in)**<br><sub>B2B wholesale marketplace with slab pricing</sub> | **[Clinic Saathi](https://clinic.scaleus.in)**<br><sub>WhatsApp AI agent for clinic appointments</sub> | **[APMC Mandi](https://apmc.scaleus.in)**<br><sub>Agri-mandi arrivals, auctions and e-payments</sub> |
+| **[RentSetu](https://rentsetu.scaleus.in)**<br><sub>Property and equipment rental with verification</sub> | **[Yatra Setu](https://yatra.scaleus.in)**<br><sub>Tours and trips booking platform</sub> | **[Zippi](https://zippi.scaleus.in)**<br><sub>Super-app: shopping, food and mobility</sub> |
+| **[HealthCube Labs](https://bloodtest.scaleus.in)**<br><sub>At-home diagnostics with phlebotomist dispatch</sub> | **[CampusBite](https://campusbite.scaleus.in)**<br><sub>College canteen pre-ordering with queue-skip</sub> | **[Sangam](https://investigations.scaleus.in)**<br><sub>Case management for investigation agencies</sub> |
 
 </div>
+
+Plus **14 interactive WebGL/scroll demos** — drivable 3D worlds, scroll-driven cinematography, depth-map scanning, liquid glass — in the [portfolio](https://scaleus.in/portfolio).
 
 ---
 
@@ -190,9 +234,9 @@ Four toolkits of free utilities that run **entirely in your browser**. No sign-u
 
 - **We own the pipes.** WhatsApp runs on our own Meta Business Manager, not rented through a BSP — so clients get direct pricing and aren't locked into a reseller's margins. Same principle everywhere: if it's core to the product, we own it.
 - **Performance is a feature, not a phase.** PageSpeed 99+ on mobile *and* desktop, layout shift near zero. Fast sites convert; that's the whole argument.
-- **One design system across nine products.** A single token set means the suite looks like one company instead of nine acquisitions — and a new product ships branded on day one.
+- **One design system across thirteen products.** A single token set means the suite looks like one company instead of thirteen acquisitions — and a new product ships branded on day one.
 - **AI-assisted, not AI-generated.** I spec it, the model drafts it, I review and own every line that ships. Ten years of judgement is what makes moving that fast safe.
-- **Everything ships from Git.** Push and it's live in a minute. That discipline replaced years of edit-and-upload, and it's the single biggest reason one founder can hold twenty sites and fifteen apps at once.
+- **Everything ships from Git.** Push and it's live in a minute. That discipline replaced years of edit-and-upload, and it's the single biggest reason one founder can hold twenty-five sites and twenty-one apps at once.
 
 ---
 

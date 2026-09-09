@@ -19,6 +19,7 @@ import os
 import sys
 import urllib.request
 import urllib.error
+import re
 from collections import Counter
 from datetime import date, datetime, timedelta, timezone
 
@@ -106,7 +107,9 @@ def streaks(token, created_year):
         walk -= timedelta(days=1)
 
     active = sum(1 for v in days.values() if v > 0)
+    recent = [[k, days[k]] for k in keys[-120:]]
     return {
+        "recent_days": recent,
         "current_streak": live,
         "current_streak_from": live_from,
         "longest_streak": best,
@@ -119,6 +122,40 @@ def streaks(token, created_year):
     }
 
 
+
+def pr_count(token):
+    """Same problem as commits: totalPullRequestContributions is 0 for a `gho_`
+    token. The search API does count private PRs the token can see."""
+    try:
+        d = gh(f"https://api.github.com/search/issues?q=author:{USER}+type:pr&per_page=1", token)
+        return int(d.get("total_count", 0))
+    except Exception:
+        return 0
+
+
+def commit_count(repos, token):
+    """GraphQL `totalCommitContributions` returns ~0 for a `gho_` OAuth token —
+    private commits surface only as restrictedContributionsCount, which mixes in
+    PRs and issues. So count commits per repo instead: with per_page=1 the Link
+    header's rel="last" page number IS the commit count. Works for every token
+    type that can see the repo, so this figure can always be reproduced."""
+    total = 0
+    for r in repos:
+        url = f"https://api.github.com/repos/{r['full_name']}/commits?author={USER}&per_page=1"
+        req = urllib.request.Request(url, headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json",
+            "User-Agent": "scaleus-profile-cards",
+        })
+        try:
+            resp = urllib.request.urlopen(req, timeout=30)
+            m = re.search(r'[?&]page=(\d+)>; rel="last"', resp.headers.get("Link", ""))
+            total += int(m.group(1)) if m else len(json.load(resp))
+        except urllib.error.HTTPError:
+            pass          # empty repo or no access — contributes nothing
+    return total
+
+
 def collect(token):
     """Pull real numbers. Falls back to the committed metrics.json if the API is
     unavailable, so a failed refresh never blanks the profile."""
@@ -126,7 +163,7 @@ def collect(token):
     created_year = int(user["created_at"][:4])
     this_year = datetime.now(timezone.utc).year
 
-    contributions = commits = prs = 0
+    contributions = 0
     years = {}
     for y in range(created_year, this_year + 1):
         q = (
@@ -139,8 +176,6 @@ def collect(token):
         total = c["contributionCalendar"]["totalContributions"]
         years[y] = total
         contributions += total
-        commits += c["totalCommitContributions"]
-        prs += c["totalPullRequestContributions"]
 
     repos = gh("https://api.github.com/user/repos?per_page=100&sort=pushed", token)
     langs = Counter()
@@ -154,8 +189,8 @@ def collect(token):
         "generated": datetime.now(timezone.utc).strftime("%d %b %Y"),
         "contributions": contributions,
         "contributions_this_year": years.get(this_year, 0),
-        "commits": commits,
-        "prs": prs,
+        "commits": commit_count(repos, token),
+        "prs": pr_count(token),
         # Count the listing rather than trusting user.total_private_repos — that
         # counter reads 0 for fine-grained tokens even when the repos are visible.
         "private_repos": sum(1 for r in repos if r["private"]),
@@ -266,7 +301,7 @@ def hero(m):
     # never collide with the tagline, whatever font the renderer substitutes.
     parts.append(f'  <line x1="672" y1="52" x2="672" y2="208" stroke="{VIOLET}" stroke-opacity=".3"/>')
     # Verified by hand: every URL returns 200 and every store listing resolves.
-    stats = [("9", "products in the suite"), ("20", "live production sites"), ("15", "apps on the stores")]
+    stats = [("13", "products in the suite"), ("25", "live production sites"), ("21", "apps on the stores")]
     for i, (n, lbl) in enumerate(stats):
         cy = 96 + i * 46
         parts += [
@@ -399,7 +434,7 @@ def timeline_card(m):
         return x0 + max(0.0, min(1.0, t)) * (x1 - x0)
 
     p = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Career timeline: e-commerce and senior management from 2011, first production code in 2016, Scale Us Technologies founded 2020, moved onto Git in 2023, nine products and fifteen apps by {Y1}">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Career timeline: e-commerce and senior management from 2011, first production code in 2016, Scale Us Technologies founded 2020, moved onto Git in 2023, thirteen products and twenty-one apps by {Y1}">',
         defs(u),
         f'  <rect width="{w}" height="{h}" rx="16" fill="{INK_950}"/>',
         f'  <rect width="{w}" height="{h}" rx="16" fill="url(#grid{u})"/>',
@@ -434,7 +469,7 @@ def timeline_card(m):
         (2016, "First production code", "freelance &amp; agency delivery", MINT, "up"),
         (2020, "Scale Us Technologies LLP", "founded", AMBER, "down"),
         (2023, "Everything moves onto Git", "this account opens", CORAL, "up"),
-        (Y1, "9 products &#183; 20 sites &#183; 15 apps", "live in production", CYAN, "down"),
+        (Y1, "13 products &#183; 25 sites &#183; 21 apps", "live in production", CYAN, "down"),
     ]
     for year, title, sub, col, side in marks:
         gx = X(year)
@@ -454,6 +489,51 @@ def timeline_card(m):
             f'  <text x="{tx:.0f}" y="{ty}" font-family="{SANS}" font-size="12.5" font-weight="600" fill="{PAPER_0}" text-anchor="{anchor}">{title}</text>',
             f'  <text x="{tx:.0f}" y="{sy}" font-family="{SANS}" font-size="10.5" fill="{INK_400}" text-anchor="{anchor}">{sub}</text>',
         ]
+    p.append("</svg>")
+    return "\n".join(p)
+
+
+def activity_card(m):
+    """Replaces github-readme-activity-graph.vercel.app, which returned 402
+    (Vercel quota) and was rendering as a broken image on the profile. Same data,
+    generated here, so it cannot go down."""
+    w, h, u = 1000, 200, "A"
+    series = [(d, int(n)) for d, n in (m.get("recent_days") or [])][-120:]
+    p = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Contribution activity over the last {len(series)} days">',
+        defs(u),
+        f'  <rect width="{w}" height="{h}" rx="16" fill="{INK_900}"/>',
+        f'  <rect width="{w}" height="{h}" rx="16" fill="url(#grid{u})"/>',
+        f'  <rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="15.5" fill="none" stroke="{VIOLET}" stroke-opacity=".22"/>',
+        f'  <text x="30" y="40" font-family="{SERIF}" font-size="22" fill="{PAPER_0}">Recent activity</text>',
+    ]
+    if not series:
+        p += [f'  <text x="30" y="66" font-family="{MONO}" font-size="10" fill="{INK_400}">NO DATA</text>', "</svg>"]
+        return "\n".join(p)
+
+    peak = max(n for _, n in series) or 1
+    tot = sum(n for _, n in series)
+    p.append(f'  <text x="30" y="60" font-family="{MONO}" font-size="10" letter-spacing="1.2" fill="{VIOLET}">'
+             f'LAST {len(series)} DAYS &#183; {tot:,} CONTRIBUTIONS &#183; PEAK {peak} IN A DAY</text>')
+
+    x0, x1, base, top = 30, w - 30, 168, 78
+    bw = (x1 - x0) / len(series)
+    for i, (d, n) in enumerate(series):
+        bx = x0 + i * bw
+        bh = 0 if n == 0 else max(2.0, (n / peak) * (base - top))
+        col = INK_700 if n == 0 else (VIOLET if n < peak * .5 else CORAL if n < peak * .8 else AMBER)
+        p.append(f'  <rect x="{bx:.1f}" y="{base-bh:.1f}" width="{max(1.0,bw-1.1):.1f}" height="{max(1.0,bh):.1f}" rx="1" fill="{col}"/>')
+    p.append(f'  <line x1="{x0}" y1="{base+1}" x2="{x1}" y2="{base+1}" stroke="{INK_700}"/>')
+    # Month boundaries, so the axis is readable without a label per day
+    seen = set()
+    for i, (d, _) in enumerate(series):
+        mk = d[:7]
+        if mk in seen:
+            continue
+        seen.add(mk)
+        bx = x0 + i * bw
+        p.append(f'  <text x="{bx:.0f}" y="{base+18}" font-family="{MONO}" font-size="9" fill="{INK_400}">'
+                 f'{date.fromisoformat(d).strftime("%b")}</text>')
     p.append("</svg>")
     return "\n".join(p)
 
@@ -528,7 +608,7 @@ def main():
         json.dump(m, fh, indent=2)
     cards = (("hero", hero(m)), ("stats", stats_card(m)),
              ("languages", lang_card(m)), ("experience", experience_card(m)),
-             ("streak", streak_card(m)), ("timeline", timeline_card(m)))
+             ("streak", streak_card(m)), ("timeline", timeline_card(m)), ("activity", activity_card(m)))
     for name, svg in cards:
         with open(os.path.join(OUT, f"{name}.svg"), "w") as fh:
             fh.write(svg)

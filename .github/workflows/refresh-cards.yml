@@ -12,12 +12,17 @@ name: Refresh profile stat cards
 # numbers, so the profile never shows broken or empty cards.
 
 on:
-  # Every 4 hours. GitHub can't notify this repo when you commit to a *different*
-  # private repo (that would need a dispatch step added to all 50 of them), so a
-  # frequent schedule is the hands-off equivalent — the card is never more than a
-  # few hours behind, with no manual step.
+  # GitHub can't notify this repo when you commit to a *different* private repo
+  # (that would need a dispatch step in all 67 of them), so a schedule is the
+  # hands-off equivalent. Discrete slots, not a "*/4" step. GitHub queues scheduled workflows at the
+  # lowest priority and silently drops them under load — the */4 form was firing
+  # roughly once a WEEK (runs were exactly 7 days apart, 10 Aug -> 7 Sep). Listing
+  # separate entries gives several independent chances to land each day.
   schedule:
-    - cron: "17 */4 * * *"
+    - cron: "23 1 * * *"
+    - cron: "23 7 * * *"
+    - cron: "23 13 * * *"
+    - cron: "23 19 * * *"
   workflow_dispatch: # refresh on demand from the Actions tab
   push:
     paths:
