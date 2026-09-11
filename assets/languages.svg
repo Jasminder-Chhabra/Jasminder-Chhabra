@@ -23,10 +23,10 @@
   <line x1="28" y1="78" x2="472" y2="78" stroke="#3E3658"/>
   <clipPath id="bcL"><rect x="28" y="98" width="444" height="16" rx="8"/></clipPath>
   <g clip-path="url(#bcL)">
-    <rect x="28.0" y="98" width="169.7" height="16" fill="#7C3AED"/>
-    <rect x="197.7" y="98" width="93.5" height="16" fill="#EC4899"/>
-    <rect x="291.2" y="98" width="85.8" height="16" fill="#F59E0B"/>
-    <rect x="377.0" y="98" width="25.9" height="16" fill="#3B82F6"/>
+    <rect x="28.0" y="98" width="169.8" height="16" fill="#7C3AED"/>
+    <rect x="197.8" y="98" width="93.5" height="16" fill="#EC4899"/>
+    <rect x="291.3" y="98" width="85.7" height="16" fill="#F59E0B"/>
+    <rect x="377.0" y="98" width="25.8" height="16" fill="#3B82F6"/>
     <rect x="402.9" y="98" width="21.7" height="16" fill="#06B6D4"/>
     <rect x="424.5" y="98" width="47.5" height="16" fill="#A39BB3"/>
   </g>
