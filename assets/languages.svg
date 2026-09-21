@@ -23,8 +23,8 @@
   <line x1="28" y1="78" x2="472" y2="78" stroke="#3E3658"/>
   <clipPath id="bcL"><rect x="28" y="98" width="444" height="16" rx="8"/></clipPath>
   <g clip-path="url(#bcL)">
-    <rect x="28.0" y="98" width="177.0" height="16" fill="#7C3AED"/>
-    <rect x="205.0" y="98" width="90.5" height="16" fill="#EC4899"/>
+    <rect x="28.0" y="98" width="177.1" height="16" fill="#7C3AED"/>
+    <rect x="205.1" y="98" width="90.5" height="16" fill="#EC4899"/>
     <rect x="295.5" y="98" width="84.1" height="16" fill="#F59E0B"/>
     <rect x="379.6" y="98" width="25.1" height="16" fill="#3B82F6"/>
     <rect x="404.7" y="98" width="20.8" height="16" fill="#06B6D4"/>
