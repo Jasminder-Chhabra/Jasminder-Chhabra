@@ -19,15 +19,15 @@
         stroke="#7C3AED" stroke-opacity=".22"/>
   <title>Languages across all repos</title>
   <text x="28" y="42" font-family="Georgia,'Times New Roman',serif" font-size="22" fill="#FBFAF6">What it&#8217;s written in</text>
-  <text x="28" y="63" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="10" letter-spacing="1.2" fill="#7C3AED">407 MB ACROSS EVERY REPO, PUBLIC + PRIVATE</text>
+  <text x="28" y="63" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="10" letter-spacing="1.2" fill="#7C3AED">408 MB ACROSS EVERY REPO, PUBLIC + PRIVATE</text>
   <line x1="28" y1="78" x2="472" y2="78" stroke="#3E3658"/>
   <clipPath id="bcL"><rect x="28" y="98" width="444" height="16" rx="8"/></clipPath>
   <g clip-path="url(#bcL)">
     <rect x="28.0" y="98" width="156.3" height="16" fill="#7C3AED"/>
     <rect x="184.3" y="98" width="107.5" height="16" fill="#EC4899"/>
-    <rect x="291.8" y="98" width="88.7" height="16" fill="#F59E0B"/>
+    <rect x="291.8" y="98" width="88.6" height="16" fill="#F59E0B"/>
     <rect x="380.5" y="98" width="31.3" height="16" fill="#3B82F6"/>
-    <rect x="411.9" y="98" width="19.8" height="16" fill="#06B6D4"/>
+    <rect x="411.8" y="98" width="19.9" height="16" fill="#06B6D4"/>
     <rect x="431.7" y="98" width="40.3" height="16" fill="#A39BB3"/>
   </g>
   <circle cx="36" cy="148" r="5.5" fill="#7C3AED"/>
