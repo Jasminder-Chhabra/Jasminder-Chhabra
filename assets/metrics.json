@@ -1,25 +1,25 @@
 {
   "generated": "11 Oct 2026",
-  "contributions": 5367,
-  "contributions_this_year": 4354,
-  "commits": 2988,
+  "contributions": 5394,
+  "contributions_this_year": 4381,
+  "commits": 3014,
   "prs": 372,
-  "private_repos": 88,
+  "private_repos": 89,
   "public_repos": 6,
   "since": 2023,
-  "code_bytes": 409213913,
+  "code_bytes": 410019952,
   "languages": [
     [
       "PHP",
-      144001487
+      144280884
     ],
     [
       "Blade",
-      98792507
+      99100593
     ],
     [
       "JavaScript",
-      81417648
+      81491277
     ],
     [
       "Dart",
@@ -27,7 +27,7 @@
     ],
     [
       "CSS",
-      18275740
+      18385163
     ],
     [
       "TypeScript",
@@ -35,7 +35,7 @@
     ],
     [
       "HTML",
-      10076828
+      10080756
     ],
     [
       "SCSS",
@@ -51,7 +51,7 @@
     ],
     [
       "Kotlin",
-      754073
+      781413
     ],
     [
       "Vue",
@@ -94,7 +94,7 @@
     "2023": 103,
     "2024": 345,
     "2025": 565,
-    "2026": 4354
+    "2026": 4381
   },
   "recent_days": [
     [
@@ -575,7 +575,7 @@
     ],
     [
       "2026-10-11",
-      1
+      28
     ]
   ],
   "current_streak": 22,
