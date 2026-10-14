@@ -1,17 +1,17 @@
 {
   "generated": "14 Oct 2026",
-  "contributions": 5484,
-  "contributions_this_year": 4471,
-  "commits": 3124,
-  "prs": 375,
+  "contributions": 5493,
+  "contributions_this_year": 4480,
+  "commits": 3131,
+  "prs": 377,
   "private_repos": 90,
   "public_repos": 6,
   "since": 2023,
-  "code_bytes": 421743322,
+  "code_bytes": 421777966,
   "languages": [
     [
       "PHP",
-      151027848
+      151062492
     ],
     [
       "Blade",
@@ -94,7 +94,7 @@
     "2023": 103,
     "2024": 345,
     "2025": 565,
-    "2026": 4471
+    "2026": 4480
   },
   "recent_days": [
     [
