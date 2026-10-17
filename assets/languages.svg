@@ -19,7 +19,7 @@
         stroke="#7C3AED" stroke-opacity=".22"/>
   <title>Languages across all repos</title>
   <text x="28" y="42" font-family="Georgia,'Times New Roman',serif" font-size="22" fill="#FBFAF6">What it&#8217;s written in</text>
-  <text x="28" y="63" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="10" letter-spacing="1.2" fill="#7C3AED">422 MB ACROSS EVERY REPO, PUBLIC + PRIVATE</text>
+  <text x="28" y="63" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="10" letter-spacing="1.2" fill="#7C3AED">423 MB ACROSS EVERY REPO, PUBLIC + PRIVATE</text>
   <line x1="28" y1="78" x2="472" y2="78" stroke="#3E3658"/>
   <clipPath id="bcL"><rect x="28" y="98" width="444" height="16" rx="8"/></clipPath>
   <g clip-path="url(#bcL)">
