@@ -16,7 +16,7 @@
   <rect width="1000" height="200" rx="16" fill="url(#gridA)"/>
   <rect x=".5" y=".5" width="999" height="199" rx="15.5" fill="none" stroke="#7C3AED" stroke-opacity=".22"/>
   <text x="30" y="40" font-family="Georgia,'Times New Roman',serif" font-size="22" fill="#FBFAF6">Recent activity</text>
-  <text x="30" y="60" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="10" letter-spacing="1.2" fill="#7C3AED">LAST 120 DAYS &#183; 3,797 CONTRIBUTIONS &#183; PEAK 220 IN A DAY</text>
+  <text x="30" y="60" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="10" letter-spacing="1.2" fill="#7C3AED">LAST 120 DAYS &#183; 3,816 CONTRIBUTIONS &#183; PEAK 220 IN A DAY</text>
   <rect x="30.0" y="120.5" width="6.7" height="47.5" rx="1" fill="#EC4899"/>
   <rect x="37.8" y="144.3" width="6.7" height="23.7" rx="1" fill="#7C3AED"/>
   <rect x="45.7" y="130.0" width="6.7" height="38.0" rx="1" fill="#7C3AED"/>
@@ -116,8 +116,8 @@
   <rect x="782.0" y="161.9" width="6.7" height="6.1" rx="1" fill="#7C3AED"/>
   <rect x="789.8" y="120.5" width="6.7" height="47.5" rx="1" fill="#EC4899"/>
   <rect x="797.7" y="147.1" width="6.7" height="20.9" rx="1" fill="#7C3AED"/>
-  <rect x="805.5" y="130.8" width="6.7" height="37.2" rx="1" fill="#7C3AED"/>
-  <rect x="813.3" y="161.5" width="6.7" height="6.5" rx="1" fill="#7C3AED"/>
+  <rect x="805.5" y="127.9" width="6.7" height="40.1" rx="1" fill="#7C3AED"/>
+  <rect x="813.3" y="161.0" width="6.7" height="7.0" rx="1" fill="#7C3AED"/>
   <rect x="821.2" y="137.7" width="6.7" height="30.3" rx="1" fill="#7C3AED"/>
   <rect x="829.0" y="158.2" width="6.7" height="9.8" rx="1" fill="#7C3AED"/>
   <rect x="836.8" y="150.0" width="6.7" height="18.0" rx="1" fill="#7C3AED"/>
@@ -129,14 +129,14 @@
   <rect x="883.8" y="155.7" width="6.7" height="12.3" rx="1" fill="#7C3AED"/>
   <rect x="891.7" y="159.8" width="6.7" height="8.2" rx="1" fill="#7C3AED"/>
   <rect x="899.5" y="159.0" width="6.7" height="9.0" rx="1" fill="#7C3AED"/>
-  <rect x="907.3" y="148.4" width="6.7" height="19.6" rx="1" fill="#7C3AED"/>
-  <rect x="915.2" y="161.0" width="6.7" height="7.0" rx="1" fill="#7C3AED"/>
+  <rect x="907.3" y="147.5" width="6.7" height="20.5" rx="1" fill="#7C3AED"/>
+  <rect x="915.2" y="160.2" width="6.7" height="7.8" rx="1" fill="#7C3AED"/>
   <rect x="923.0" y="141.8" width="6.7" height="26.2" rx="1" fill="#7C3AED"/>
   <rect x="930.8" y="97.6" width="6.7" height="70.4" rx="1" fill="#EC4899"/>
   <rect x="938.7" y="145.9" width="6.7" height="22.1" rx="1" fill="#7C3AED"/>
   <rect x="946.5" y="166.0" width="6.7" height="2.0" rx="1" fill="#7C3AED"/>
   <rect x="954.3" y="168.0" width="6.7" height="1.0" rx="1" fill="#3E3658"/>
-  <rect x="962.2" y="168.0" width="6.7" height="1.0" rx="1" fill="#3E3658"/>
+  <rect x="962.2" y="165.1" width="6.7" height="2.9" rx="1" fill="#7C3AED"/>
   <line x1="30" y1="169" x2="970" y2="169" stroke="#3E3658"/>
   <text x="30" y="186" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" fill="#A39BB3">Jun</text>
   <text x="85" y="186" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9" fill="#A39BB3">Jul</text>
