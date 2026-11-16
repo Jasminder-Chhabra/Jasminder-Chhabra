@@ -1,8 +1,8 @@
 {
   "generated": "16 Nov 2026",
-  "contributions": 6786,
-  "contributions_this_year": 5773,
-  "commits": 4293,
+  "contributions": 6794,
+  "contributions_this_year": 5781,
+  "commits": 4301,
   "prs": 471,
   "private_repos": 94,
   "public_repos": 6,
@@ -11,7 +11,7 @@
   "languages": [
     [
       "PHP",
-      377485970
+      377493758
     ],
     [
       "JavaScript",
@@ -19,7 +19,7 @@
     ],
     [
       "Blade",
-      113798651
+      113798837
     ],
     [
       "CSS",
@@ -94,7 +94,7 @@
     "2023": 103,
     "2024": 345,
     "2025": 565,
-    "2026": 5773
+    "2026": 5781
   },
   "recent_days": [
     [
